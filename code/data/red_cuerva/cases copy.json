@@ -1,0 +1,17 @@
+{
+    "1": {
+        "name": "both",
+        "imbalance": "high",
+        "r_earthing": null
+    },
+    "2": {
+        "name": "both",
+        "imbalance": "high",
+        "r_earthing": 2
+    },
+    "3": {
+        "name": "both",
+        "imbalance": "high",
+        "r_earthing": 40
+    }
+}

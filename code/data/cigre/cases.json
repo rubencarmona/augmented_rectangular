@@ -1,0 +1,137 @@
+{
+    "1": {
+        "name": "consumption",
+        "imbalance": null,
+        "r_earthing": 2
+    },
+    "2": {
+        "name": "consumption",
+        "imbalance": "low",
+        "r_earthing": 2
+    },
+    "3": {
+        "name": "consumption",
+        "imbalance": "high",
+        "r_earthing": 2
+    },
+    "4": {
+        "name": "consumption",
+        "imbalance": null,
+        "r_earthing": 40
+    },
+    "5": {
+        "name": "consumption",
+        "imbalance": "low",
+        "r_earthing": 40
+    },
+    "6": {
+        "name": "consumption",
+        "imbalance": "high",
+        "r_earthing": 40
+    },
+    "7": {
+        "name": "consumption",
+        "imbalance": null,
+        "r_earthing": null
+    },
+    "8": {
+        "name": "consumption",
+        "imbalance": "low",
+        "r_earthing": null
+    },
+    "9": {
+        "name": "consumption",
+        "imbalance": "high",
+        "r_earthing": null
+    },
+    "10": {
+        "name": "generation",
+        "imbalance": null,
+        "r_earthing": 2
+    },
+    "11": {
+        "name": "generation",
+        "imbalance": "low",
+        "r_earthing": 2
+    },
+    "12": {
+        "name": "generation",
+        "imbalance": "high",
+        "r_earthing": 2
+    },
+    "13": {
+        "name": "generation",
+        "imbalance": null,
+        "r_earthing": 40
+    },
+    "14": {
+        "name": "generation",
+        "imbalance": "low",
+        "r_earthing": 40
+    },
+    "15": {
+        "name": "generation",
+        "imbalance": "high",
+        "r_earthing": 40
+    },
+    "16": {
+        "name": "generation",
+        "imbalance": null,
+        "r_earthing": null
+    },
+    "17": {
+        "name": "generation",
+        "imbalance": "low",
+        "r_earthing": null
+    },
+    "18": {
+        "name": "both",
+        "imbalance": null,
+        "r_earthing": 2
+    },
+    "19": {
+        "name": "both",
+        "imbalance": "low",
+        "r_earthing": 2
+    },
+    "20": {
+        "name": "both",
+        "imbalance": "high",
+        "r_earthing": 2
+    },
+    "21": {
+        "name": "both",
+        "imbalance": null,
+        "r_earthing": 40
+    },
+    "22": {
+        "name": "both",
+        "imbalance": "low",
+        "r_earthing": 40
+    },
+    "23": {
+        "name": "both",
+        "imbalance": "high",
+        "r_earthing": 40
+    },
+    "24": {
+        "name": "both",
+        "imbalance": null,
+        "r_earthing": null
+    },
+    "25": {
+        "name": "both",
+        "imbalance": "low",
+        "r_earthing": null
+    },
+    "26": {
+        "name": "both",
+        "imbalance": "high",
+        "r_earthing": null
+    },
+    "27": {
+        "name": "generation",
+        "imbalance": "high",
+        "r_earthing": null
+    }
+}

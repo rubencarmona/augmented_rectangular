@@ -1,0 +1,24 @@
+name,type,threephase,material,almelec,neutral
+"BT - RZ 0,6/1 KV 3*150 AL/95 ALM",overhead,true,al,true,equal
+"BT - RV 0,6/1 KV 3(1*150 KAL) + 1*95 KAL",underline,true,al,false,half
+"BT - RV 0,6/1 KV 4*25 KAL",underline,true,al,false,equal
+"BT - RZ 0,6/1 KV 4*16 AL",overhead,true,cu,false,equal
+BT - MANGUERA,underline,true,cu,false,equal
+"BT - RZ 0,6/1 KV 3*25 AL/54,6 ALM",overhead,true,al,true,double
+"BT - RX 0,6/1 KV 2*6 Cu",unederline,false,cu,false,equal
+"BT - RV 0,6/1 KV 2*25 KAL",underline,false,al,false,equal
+"BT - RZ 0,6/1 KV 3*95 AL/54,6 ALM",overhead,true,al,true,half
+"BT - RV 0,6/1 KV 4*95 KAL",underline,true,al,false,equal
+"BT - RZ 0,6/1 KV 3*150 AL/80 ALM",overhead,true,al,true,half
+"BT - RZ 0,6/1 KV 3*35 AL/54,6 ALM",overhead,true,al,true,double
+"BT - RZ 0,6/1 KV 3*50 AL/54,6 ALM",overhead,true,al,true,equal
+"BT - RZ 0,6/1 KV 2*16 AL",overhead,false,cu,false,equal
+BT - Desconocido BT,underline,true,cu,false,equal
+"BT - RZ 0,6/1 KV 3*70 ALM/54,6 AL",overhead,true,cu,true,half
+"BT - RV 0,6/1 KV 3(1*240 KAL) + 1*150 KAL",underline,true,al,false,half
+"BT - RV 0,6/1 KV 2*16 KAL",underline,false,al,false,equal
+"BT - RX 0,6/1 KV 2*4 Cu",unederline,false,cu,false,equal
+"BT - RX 0,6/1 KV 2*2 Cu",unederline,false,cu,false,equal
+"BT - RX 0,6/1 KV 2*16 Cu",unederline,false,cu,false,equal
+"BT - RV 0,6/1 KV 4*50 KAL",underline,true,al,false,equal
+"BT - RV 0,6/1 KV 3(1*240 KAL) + 1*95 KAL",underline,true,al,false,half

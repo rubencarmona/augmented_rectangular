@@ -1,0 +1,1 @@
+{"1": {"type": {"name": "both", "imbalance": "high", "r_earthing": 2.0}, "n_iterations": 2, "condition": 3515125.313739676, "residuals": [22.949672970950807, 1.2416711797413882e-05], "elapsed_time": 7.857994794845581, "tol": 0.0001, "converge": true}}
