@@ -8,7 +8,7 @@ import networkx
 import os
 
 
-path_arboleya = os.path.join('..', '..', '..', '..', 'Paper y Red Arboleya', 'Sim_files_190128_OK_V0', 'GIS_data')
+path_arboleya = os.path.join('data_original')
 
 cts = pd.read_excel(os.path.join(path_arboleya, "master.xlsx"), sheet_name="CT - TRAFO")
 lbts = pd.read_excel(os.path.join(path_arboleya, "master.xlsx"), sheet_name="Linea BT")
@@ -38,6 +38,7 @@ for _, i in enumerate(ctlist):
         #segments_length = segments.merge(coordenadas_seg, left_on="Mslink", right_on="Mslink", how="left")
         cabletypes = segments["Tipo Cable"].tolist()
         cablelength = segments["Longitud"].tolist()
+        cabletrazado = segments["Tipo"].tolist()
         if len(segments)>1: 
             totalnodes = list(pd.concat([segments["Nudo Origen"].drop_duplicates(), segments["Nudo Destino"].drop_duplicates()]).drop_duplicates())
             G = networkx.Graph()
@@ -46,22 +47,27 @@ for _, i in enumerate(ctlist):
             edges = edges+[(ctnode,lbtlist["lineas"][j])]
             cabletypes += ["BT - Desconocido BT"]
             cablelength += [1]
+            cabletrazado += ["Subterráneo"]
             attrs = {}
             for __, k in enumerate(edges):
                 attrs[k] = {}
                 attrs[k]["cable"] = cabletypes[__]
                 attrs[k]["length"] = cablelength[__]
+                attrs[k]["kind"] = cabletrazado[__]
             G.add_edges_from(edges)
             networkx.set_edge_attributes(G, attrs)
             newG = list(networkx.bfs_edges(G,ctnode))
             cs = []
             ln = []
+            knd = []
             for l in newG:
                 cs.append(G[l[0]][l[1]]["cable"])
                 ln.append(G[l[0]][l[1]]["length"])
+                knd.append(G[l[0]][l[1]]["kind"])
             newtramos = pd.DataFrame(list(networkx.bfs_edges(G,ctnode)), columns=["nodefrom", "nodeto"])
             newtramos["cable"] = cs
             newtramos["length"] = ln
+            newtramos["kind"] = knd
 
             lbtcomplete = newtramos.merge(acometidas[["Nudo Origen", "Clave BDI"]].rename({"Nudo Origen":"nodeto", "Clave BDI":"PCR"}, axis=1), left_on="nodeto", right_on="nodeto", how="left")
 

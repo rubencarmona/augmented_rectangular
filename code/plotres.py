@@ -161,6 +161,56 @@ def plot_conditionnumber(path_res,ncases, braz, us, tp):
     #plt.show()
     fig.savefig(os.path.join(path_res, "conditionnumber-{}.png".format(tp)), dpi=300)
 
+def plotLineVoltage(df, pathsaving):
+
+    #fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(nrows=2, ncols=2, sharex=True, sharey=True, figsize=(10, 4))
+    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(nrows=2, ncols=2, sharex=True, figsize=(20, 10))
+    d = {
+        "R": {"g": ax1, "cl": "tomato", "c": "red"},
+        "S": {"g": ax2, "cl": "tomato", "c": "red"}, 
+        "T": {"g": ax3, "cl": "tomato", "c": "red"},
+        "N": {"g": ax4, "cl": "tomato", "c": "red"}
+    }
+
+    limits = {"min": min(df["vR_us"].min(),df["vS_us"].min(), df["vT_us"].min()),
+              "max": max(df["vR_us"].max(),df["vS_us"].max(), df["vT_us"].max())}
+    for i in d:
+        d[i]["g"].plot(df["node"].tolist(), df["v{}_us".format(i)], linewidth=2, color=d[i]["cl"], label="Phase {}".format(i))
+        d[i]["g"].plot(df["node"].tolist(), df["v{}_us".format(i)], "o", color=d[i]["c"])
+        d[i]["g"].legend(loc="best")
+        d[i]["g"].set_ylabel("Voltage (V)",fontsize=14, fontname="Times New Roman")
+        if ((i == "T") | (i == "N")): d[i]["g"].set_xlabel("Nodes",fontsize=14, fontname="Times New Roman")
+        d[i]["g"].set_title("Voltage evolution through the grid in phase {}".format(i),fontsize=18, fontname="Times New Roman")
+        d[i]["g"].grid()
+        if i == "N": continue
+        d[i]["g"].set_ylim(limits["min"]-2, limits["max"]+2)
+    fig.savefig(os.path.join(pathsaving, "voltageevolution.pdf"), dpi=300)
+
+def plotLineCurrents(df, pathsaving):
+
+    #fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(nrows=2, ncols=2, sharex=True, sharey=True, figsize=(10, 4))
+    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(nrows=2, ncols=2, sharex=True, figsize=(20, 10))
+    d = {
+        "R": {"g": ax1, "cl": "tomato", "c": "red"},
+        "S": {"g": ax2, "cl": "tomato", "c": "red"}, 
+        "T": {"g": ax3, "cl": "tomato", "c": "red"},
+        "N": {"g": ax4, "cl": "tomato", "c": "red"}
+    }
+
+    limits = {"min": min(df["iR_us"].min(),df["iS_us"].min(), df["iT_us"].min()),
+              "max": max(df["iR_us"].max(),df["iS_us"].max(), df["iT_us"].max())}
+    for i in d:
+        d[i]["g"].plot(df["line"].tolist(), df["i{}_us".format(i)], linewidth=2, color=d[i]["cl"], label="Phase {}".format(i))
+        d[i]["g"].plot(df["line"].tolist(), df["i{}_us".format(i)], "o", color=d[i]["c"])
+        d[i]["g"].legend(loc="best")
+        d[i]["g"].set_ylabel("Current (A)",fontsize=14, fontname="Times New Roman")
+        if ((i == "T") | (i == "N")): d[i]["g"].set_xlabel("Lines",fontsize=14, fontname="Times New Roman")
+        d[i]["g"].set_title("Current evolution through the grid in phase {}".format(i),fontsize=18, fontname="Times New Roman")
+        d[i]["g"].grid()
+        if i == "N": continue
+        d[i]["g"].set_ylim(limits["min"]-2, limits["max"]+2)
+    fig.savefig(os.path.join(pathsaving, "currentevolution.pdf"), dpi=300)
+
 def plot_times(path_res, ncases, braz, us, tp):
 
     condus = []

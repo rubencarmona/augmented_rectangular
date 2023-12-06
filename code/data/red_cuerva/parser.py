@@ -30,7 +30,6 @@ for _, r in cables.iterrows():
                                            [r["x_ff"]*zb, r["x_ff"]*zb, r["x_ff"]*zb, r["x_n"]*zb]]
 with open(os.path.join("cableparameters.json"), "w") as f:
     json.dump(cableparameters,f)
-sys.exit()
 for i in df["network"]["branches"]:
     n = df["network"]["branches"][i]
     c = cables.loc[((cables["r_f"]==n["r_f"]) & (cables["x_f"]==n["x_f"]) & (cables["r_ff"]==n["r_ff"]))]["alias"].values[0]
@@ -78,13 +77,15 @@ with open(os.path.join("net.json"), "w") as f:
 # imbalance.json
 imbalance = {}
 for i in df["measurements"]["p_inj"]:
-    sb = df["configuration"]["sbase"]
+    #TODO: Multiplico las cargas por 10 para buscar un escenario bien congestionado
+    sbp = df["configuration"]["sbase"]*10
+    sbq = df["configuration"]["sbase"]*10
     l = df["network"]["nodes"][i]["id"]
     if df["network"]["nodes"][i]["type"] == "heading": continue
     p = df["measurements"]["p_inj"]
     q = df["measurements"]["q_inj"]
     imbalance[l] = {}
-    imbalance[l]["p"] = [p[i]["1"]["value"]*sb,p[i]["2"]["value"]*sb,p[i]["3"]["value"]*sb]
-    imbalance[l]["q"] = [q[i]["1"]["value"]*sb,q[i]["2"]["value"]*sb,q[i]["3"]["value"]*sb]
+    imbalance[l]["p"] = [p[i]["1"]["value"]*sbp,p[i]["2"]["value"]*sbp,p[i]["3"]["value"]*sbp]
+    imbalance[l]["q"] = [q[i]["1"]["value"]*sbq,q[i]["2"]["value"]*sbq,q[i]["3"]["value"]*sbq]
 with open(os.path.join("imbalance.json"), "w") as f:
     json.dump(imbalance,f)

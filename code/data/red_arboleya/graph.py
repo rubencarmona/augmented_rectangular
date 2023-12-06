@@ -8,10 +8,14 @@ import os
 for i in os.listdir():
     print(i)
     if "ct" in i:
-        data = pd.read_csv(os.path.join(i, "branches.csv"))
-        loads = pd.read_csv(os.path.join(i, "loads.csv"))
-        pcrs = data[["nodeto", "PCR"]].drop_duplicates()
-        pcrsdict = pcrs.set_index("nodeto").to_dict()
+        with open(os.path.join(i, "net.json"), "r") as f:
+            net = json.load(f)
+        data = pd.DataFrame(net["network"]["branch"]).T
+        buses = pd.DataFrame(net["network"]["bus"]).T
+        #buses.reset_index(inplace=True)
+        #loads = pd.read_csv(os.path.join(i, "loads.csv"))
+        #pcrs = data[["nodeto", "PCR"]].drop_duplicates()
+        #pcrsdict = pcrs.set_index("nodeto").to_dict()
         #Parsing data
         nodes = []
         nodes.extend(data['nodefrom'].drop_duplicates().tolist())
@@ -29,18 +33,21 @@ for i in os.listdir():
             edge = (r['nodefrom'],r['nodeto'])
             G.add_edge(*edge)
         color = []
+        nodesize = []
         for n in G.nodes():
-            if n in pcrsdict["PCR"]:
-                if pcrsdict["PCR"][n] in loads["PCR"].drop_duplicates().tolist():
-                    color.append("red")
-                else:
-                    color.append("black")
+            if buses.iloc[n-1]["slack"]:
+                color.append("orange")
+                nodesize.append(200)
+            elif buses.iloc[n-1]["load"]:
+                color.append("red")
+                nodesize.append(60)
             else:
                 color.append("black")
+                nodesize.append(50)
         unindG = G.to_undirected()
 
         #Plotting graph
         fig, ax1 = plt.subplots(figsize=(20,20))
-        nx.draw_kamada_kawai(unindG,with_labels=True, node_color = color, node_size=40, edge_color='black', linewidths=1, font_size=12, ax=ax1)
-        fig.savefig(os.path.join(i,"grafo.pdf"), dpi=300)
-    
+        nx.draw_kamada_kawai(unindG,with_labels=True, node_size=nodesize, node_color= color, edge_color='black', linewidths=1, font_size=12, ax=ax1)
+        fig.savefig(os.path.join(i, "grafonew.png"), dpi=300)
+            

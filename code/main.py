@@ -6,6 +6,7 @@ paper: 1
 """
 
 import numpy as np
+import pandas as pd
 
 import json
 import random
@@ -15,6 +16,8 @@ import os
 import pf_lib as pf
 
 import time
+
+import plotres
 
 
 
@@ -62,7 +65,7 @@ def configuration():
     V_esp = [231,231,231]
     
     # TODO: estudiar la tolerancia
-    tol, n_iter_max = 1e-4, 120
+    tol, n_iter_max = 1e-4, 5
     options = [tol, n_iter_max]
 
     return U_ref, options, V_esp
@@ -95,10 +98,11 @@ def brazilianMethod(cases, net, ref, opts, imb, path_saving, networktype, loads 
         
         results[i]["voltages"] = system_pf.voltages_iter
         results[i]["currents"] = system_pf.current_iter
+        results[i]["residuallist"] = system_pf.residuoscompletos
 
     with open(os.path.join(path_saving, "results-brazilian.json"), 'w') as f:
         json.dump(results, f)
-    
+    return results
     #check1KL(system_pf)
 
 def USMethod(cases, net, ref, opts, imb, path_saving, networktype, loads = None):
@@ -126,10 +130,12 @@ def USMethod(cases, net, ref, opts, imb, path_saving, networktype, loads = None)
             results[i]["converge"] = True
         results[i]["voltages"] = system_pf.voltages_iter
         results[i]["currents"] = system_pf.current_iter
+        results[i]["residuallist"] = system_pf.residuoscompletos
         #if t == 2: break
     with open(os.path.join(path_saving, "results-us.json"), 'w') as f:
         json.dump(results, f)
     
+    return results 
     #check1KL(system_pf)
 
 def createNetworkUS(system_pf, c, net, ref, loads, imb, opts):
@@ -176,7 +182,7 @@ def createNetworkIngelectus(system_pf, c, net, ref, imb, opts):
         if net["network"]["bus"][i]["slack"]:
             system_pf.add_bus(int(i), P = None, Q = None, U = ref, Zg = 0.01, name = 'Slack')
         else:
-            if net["network"]["bus"][i]["load"]:
+            if ((net["network"]["bus"][i]["load"]) & (ln in imb)):
                 p = imb[ln]["p"]
                 q = imb[ln]["q"]
                 system_pf.add_bus(int(i), P = [p[0], p[1], p[2]], Q = [q[0], q[1], q[2]], U = None, Zg = c["r_earthing"])
@@ -213,20 +219,49 @@ def check1KL(system_pf):
                 I += line.I
         print(f'\t Bus {bus.ref}: {np.abs(I)}')
 
+def resultAnalysis(result, method):
+    
+    niter = result["1"]["n_iterations"]
+    if method == "us":
+        voltages = pd.DataFrame({"node": np.arange(len(result["1"]["voltages"][niter]["R"])),
+                                    "vR_us": result["1"]["voltages"][niter]["R"],
+                                    "vS_us": result["1"]["voltages"][niter]["S"],
+                                    "vT_us": result["1"]["voltages"][niter]["T"],
+                                    "vN_us": result["1"]["voltages"][niter]["N"]})
+        currents = pd.DataFrame({"line": np.arange(len(result["1"]["currents"][niter]["R"])),
+                                    "iR_us": result["1"]["currents"][niter]["R"],
+                                    "iS_us": result["1"]["currents"][niter]["S"],
+                                    "iT_us": result["1"]["currents"][niter]["T"],
+                                    "iN_us": result["1"]["currents"][niter]["N"]})
+    else:
+        voltages = pd.DataFrame({"node": np.arange(len(result["1"]["voltages"][niter]["R"])),
+                                    "vR_br": result["1"]["voltages"][niter]["R"],
+                                    "vS_br": result["1"]["voltages"][niter]["S"],
+                                    "vT_br": result["1"]["voltages"][niter]["T"],
+                                    "vN_br": result["1"]["voltages"][niter]["N"]})
+        currents = pd.DataFrame({"line": np.arange(len(result["1"]["currents"][niter]["R"])),
+                                    "iR_br": result["1"]["currents"][niter]["R"],
+                                    "iS_br": result["1"]["currents"][niter]["S"],
+                                    "iT_br": result["1"]["currents"][niter]["T"],
+                                    "iN_br": result["1"]["currents"][niter]["N"]})
+    
+    return voltages, currents
+
 def main():
 
     # File saving
-    name = "test18-redcigre-initB-1e-4"
-    path_saving = os.path.join("results", name)
+    name = "arboleya"
+    path_saving = os.path.join("paper-results", name)
     if not os.path.exists(path_saving): os.makedirs(path_saving)
 
     # Configuration
     ref, opts, v_esp = configuration()
-    networktype = "cigre" # Options "cigre", "red_cuerva", "red_arboleya"
+    networktype = "red_arboleya" # Options "cigre", "red_cuerva", "red_arboleya"
+    ct = "ct-65037"
 
     if networktype == "cigre":
         # Data path
-        path_cases = os.path.join("data", networktype, "cases.json")
+        path_cases = os.path.join("data", networktype, "cases-limited.json")
         path_net = os.path.join("data", networktype, "net.json")
         path_loads = os.path.join("data", networktype, "loads.json")
         # Load data
@@ -240,9 +275,19 @@ def main():
             json.dump(imbalances, f)
 
         # Execute brazilian method
-        brazilianMethod(cases, net, ref, opts, imbalances, path_saving, networktype, loads)
+        brresult = brazilianMethod(cases, net, ref, opts, imbalances, path_saving, networktype, loads)
+        vbr, ibr = resultAnalysis(brresult, "br")
         # Execute US method
-        USMethod(cases, net, ref, opts, imbalances, path_saving, networktype, loads)
+        usresult = USMethod(cases, net, ref, opts, imbalances, path_saving, networktype, loads)
+        vus, ius = resultAnalysis(usresult, "us")
+
+        # Analysis 
+        voltres = vus.merge(vbr, on="node", how="inner")
+        currres = ius.merge(ibr, on="line", how="inner")
+        voltres.to_csv(os.path.join(path_saving, "voltages.csv"), index=False)
+        # Plotting
+        plotres.plotLineVoltage(voltres, path_saving)
+        plotres.plotLineCurrents(currres, path_saving)
     elif networktype == "red_cuerva":
         # Data path
         path_cases = os.path.join("data", networktype, "cases.json")
@@ -255,10 +300,44 @@ def main():
         imbalances = loadJson(path_imb)
 
         # Execute brazilian method
-        brazilianMethod(cases, net, ref, opts, imbalances, path_saving, networktype)
-        
+        brresult = brazilianMethod(cases, net, ref, opts, imbalances, path_saving, networktype)
+        vbr, ibr = resultAnalysis(brresult, "br")
         # Execute US method
-        USMethod(cases, net, ref, opts, imbalances, path_saving, networktype)
+        usresult = USMethod(cases, net, ref, opts, imbalances, path_saving, networktype)
+        vus, ius = resultAnalysis(usresult, "us")
+
+        # Analysis 
+        voltres = vus.merge(vbr, on="node", how="inner")
+        currres = ius.merge(ibr, on="line", how="inner")
+        voltres.to_csv(os.path.join(path_saving, "voltages.csv"), index=False)
+        # Plotting
+        plotres.plotLineVoltage(voltres, path_saving)
+        plotres.plotLineCurrents(currres, path_saving)
+    elif networktype == "red_arboleya":
+        # Data path
+        path_cases = os.path.join("data", networktype, ct, "cases.json")
+        path_net = os.path.join("data", networktype, ct, "net.json")
+        path_imb = os.path.join("data", networktype, ct, "imbalance.json")
+        # Load data
+        cases = loadJson(path_cases)
+        net = loadJson(path_net)
+        # Create imbalances scenarios
+        imbalances = loadJson(path_imb)
+
+        # Execute brazilian method
+        brresult = brazilianMethod(cases, net, ref, opts, imbalances, path_saving, networktype)
+        vbr, ibr = resultAnalysis(brresult, "br")
+        # Execute US method
+        usresult = USMethod(cases, net, ref, opts, imbalances, path_saving, networktype)
+        vus, ius = resultAnalysis(usresult, "us")
+
+        # Analysis 
+        voltres = vus.merge(vbr, on="node", how="inner")
+        currres = ius.merge(ibr, on="line", how="inner")
+        voltres.to_csv(os.path.join(path_saving, "voltages.csv"), index=False)
+        # Plotting
+        plotres.plotLineVoltage(voltres, path_saving)
+        plotres.plotLineCurrents(currres, path_saving)
 
 if __name__ == "__main__":
     main()

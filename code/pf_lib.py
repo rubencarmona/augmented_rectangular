@@ -4,30 +4,7 @@ import json
 import os
 import sys
 
-#line_type = {'OH1': np.array([[0.540 + 0.777j, 0.049 + 0.505j, 0.049 + 0.462j, 0.049 + 0.436j],
-#                              [0.049 + 0.505j, 0.540 + 0.777j, 0.049 + 0.505j, 0.049 + 0.462j],
-#                              [0.049 + 0.462j, 0.049 + 0.505j, 0.540 + 0.777j, 0.049 + 0.505j],
-#                              [0.049 + 0.436j, 0.049 + 0.462j, 0.049 + 0.505j, 0.540 + 0.777j]]),       
-#             'OH2': np.array([[1.369 + 0.812j, 0.049 + 0.505j, 0.049 + 0.462j, 0.049 + 0.436j],
-#                              [0.049 + 0.505j, 1.369 + 0.812j, 0.049 + 0.505j, 0.049 + 0.462j],
-#                              [0.049 + 0.462j, 0.049 + 0.505j, 1.369 + 0.812j, 0.049 + 0.505j],
-#                              [0.049 + 0.436j, 0.049 + 0.462j, 0.049 + 0.505j, 1.369 + 0.812j]]),
-#             'OH3': np.array([[2.065 + 0.825j, 0.049 + 0.505j, 0.049 + 0.462j, 0.049 + 0.436j],
-#                              [0.049 + 0.505j, 2.065 + 0.825j, 0.049 + 0.505j, 0.049 + 0.462j],
-#                              [0.049 + 0.462j, 0.049 + 0.505j, 2.065 + 0.825j, 0.049 + 0.505j],
-#                              [0.049 + 0.436j, 0.049 + 0.462j, 0.049 + 0.505j, 2.065 + 0.825j]]),
-#             'UG1': np.array([[0.211 + 0.747j, 0.049 + 0.673j, 0.049 + 0.651j, 0.049 + 0.673j], 
-#                              [0.049 + 0.673j, 0.211 + 0.747j, 0.049 + 0.673j, 0.049 + 0.651j],
-#                              [0.049 + 0.651j, 0.049 + 0.673j, 0.211 + 0.747j, 0.049 + 0.673j],
-#                              [0.049 + 0.673j, 0.049 + 0.651j, 0.049 + 0.673j, 0.211 + 0.747j]]),
-#             'UG2': np.array([[0.314 + 0.762j, 0.049 + 0.687j, 0.049 + 0.665j, 0.049 + 0.687j], 
-#                              [0.049 + 0.687j, 0.314 + 0.762j, 0.049 + 0.687j, 0.049 + 0.665j],
-#                              [0.049 + 0.665j, 0.049 + 0.687j, 0.314 + 0.762j, 0.049 + 0.687j],
-#                              [0.049 + 0.687j, 0.049 + 0.665j, 0.049 + 0.687j, 0.314 + 0.762j]]),
-#             'UG3': np.array([[0.871 + 0.797j, 0.049 + 0.719j, 0.049 + 0.697j, 0.049 + 0.719j],
-#                              [0.049 + 0.719j, 0.871 + 0.797j, 0.049 + 0.719j, 0.049 + 0.697j],
-#                              [0.049 + 0.697j, 0.049 + 0.719j, 0.871 + 0.797j, 0.049 + 0.719j],
-#                              [0.049 + 0.719j, 0.049 + 0.697j, 0.049 + 0.719j, 0.871 + 0.797j]])}     
+   
 
 with open(os.path.join("data", "cables", "cableparameters.json"), 'r') as f:
     lt = json.load(f)
@@ -108,7 +85,7 @@ class curr_inj(grid):
         grid.__init__(self)    
                        
     def initialize(self):
-        method = "B"
+        method = "A"
         if method == "A":
             # Método A. Paper ERR y AGE 
             for bus in self.buses[1:]:
@@ -255,7 +232,7 @@ class curr_inj(grid):
                 DI += ir
         self.DI = DI 
         self.DS = DS
-        return np.max(np.abs(self.DI))      
+        return np.max(np.abs(self.DI+self.DS)), self.DI+self.DS     
    
     def next_step(self):
         self.DU = np.linalg.solve(self.J[8:,8:], self.DI)
@@ -324,6 +301,8 @@ class curr_inj(grid):
         res = 10
         iteration = 0
         self.lista_residuos = list()
+        self.residuoscompletos = {}
+        self.lista_conditions = list()
         self.voltages_iter = {}
         self.current_iter = {}
 
@@ -334,7 +313,7 @@ class curr_inj(grid):
         while res > tol and iteration < n_iter:
             print("Iteracion: " + str(iteration))
             self.generate_jacobian_matrices() 
-            res = self.compute_residuals()
+            res, reslist = self.compute_residuals()
             #print(res)
             #res = self.res_rect()
             #print(res)
@@ -342,6 +321,8 @@ class curr_inj(grid):
             iteration += 1
             print(f'\t Iteration: {iteration}. Residual: {res}')
             self.lista_residuos.append(res)
+            self.lista_conditions.append(np.linalg.cond(self.J))
+            self.residuoscompletos[iteration] = reslist
             
             self.voltage_evolution(iteration)
             self.current_evolution(iteration)
@@ -378,6 +359,7 @@ class aug_rect(grid):
                             Bsum[3] += np.sum(np.imag(self.Y[bus.ref*4 + 3, :]))   #np.imag(self.Y[bus.ref*4 + 3, line_con.ref*4 + 3])
                 for index in range(4):
                     bus.I[index] = np.complex(0, Bsum[index])
+                #print(Gsum.sum())
         else:
             # Método B. Paper ERR y AGE   
             for bus in self.buses[1:]:
@@ -479,8 +461,9 @@ class aug_rect(grid):
         self.residual_S = np.concatenate([res_S], axis=0)
         self.residual_I = np.concatenate([res_I], axis=0)  
         self.residual = np.concatenate([res_I, res_S], axis=0)   
+        #self.residual = np.copy(self.residual_I)
         self.res_ = np.copy(self.residual)
-        return np.max(np.abs(self.residual))               
+        return np.max(np.abs(self.residual)), list(np.abs(self.residual.flatten()))
     
     def next_step(self):
         Y_bus = self.generate_Y()
@@ -551,7 +534,9 @@ class aug_rect(grid):
         self.x =list()
         self.voltages_iter = {}
         self.current_iter = {}
-        self.lista_residuos = list()    
+        self.lista_residuos = list()   
+        self.residuoscompletos = {} 
+        self.lista_conditions = list()
 
         self.voltage_evolution(iteration)
         self.current_evolution(iteration)
@@ -560,14 +545,16 @@ class aug_rect(grid):
             print("Iteración: " + str(iteration))
             self.generate_Y()
             self.generate_jacobian_matrices()
-            res = self.compute_residuals()
+            res, reslist = self.compute_residuals()
             self.next_step()
             iteration += 1
             print('\t Iteration: ' + str(iteration) + '. Residual: ' + str(res))
             self.x.append(iteration)
             self.lista_residuos.append(res)
+            self.lista_conditions.append(np.linalg.cond(self.J))
             self.voltage_evolution(iteration)
             self.current_evolution(iteration)
+            self.residuoscompletos[iteration] = reslist
 
         for line in self.lines:
             line.I = np.dot(np.linalg.inv(line.Z), (np.array(line.connections[0].U) - np.array(line.connections[1].U)))        
