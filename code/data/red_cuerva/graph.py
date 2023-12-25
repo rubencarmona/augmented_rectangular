@@ -34,17 +34,17 @@ nodesize = []
 for n in G.nodes():
     if buses.iloc[n]["slack"]:
         color.append("orange")
-        nodesize.append(200)
+        nodesize.append(50)
     elif buses.iloc[n]["load"]:
         color.append("red")
-        nodesize.append(60)
+        nodesize.append(15)
     else:
         color.append("black")
-        nodesize.append(50)
+        nodesize.append(8)
 unindG = G.to_undirected()
 
 #Plotting graph
-fig, ax1 = plt.subplots(figsize=(20,20))
-nx.draw_kamada_kawai(unindG,with_labels=True, node_size=nodesize, node_color= color, edge_color='black', linewidths=1, font_size=12, ax=ax1)
-fig.savefig(os.path.join("grafo.pdf"), dpi=300)
+fig, ax1 = plt.subplots(figsize=(8,8))
+nx.draw_kamada_kawai(unindG,with_labels=False, node_size=nodesize, node_color= color, edge_color="blue", linewidths=2, width=1, font_size=12, ax=ax1)
+fig.savefig(os.path.join("grafo.pdf"), dpi=300, bbox_inches='tight')
     

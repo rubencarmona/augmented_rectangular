@@ -1,1 +1,1802 @@
-{"network": {"bus": {"0": {"slack": true, "load": false, "name": "N65", "type": "real-cuerva"}, "1": {"slack": false, "load": true, "name": "N10", "type": "real-cuerva"}, "2": {"slack": false, "load": true, "name": "N23", "type": "real-cuerva"}, "3": {"slack": false, "load": false, "name": "N62", "type": "real-cuerva"}, "4": {"slack": false, "load": false, "name": "N73", "type": "real-cuerva"}, "5": {"slack": false, "load": false, "name": "N117", "type": "real-cuerva"}, "6": {"slack": false, "load": true, "name": "N0", "type": "real-cuerva"}, "7": {"slack": false, "load": true, "name": "N29", "type": "real-cuerva"}, "8": {"slack": false, "load": true, "name": "N63", "type": "real-cuerva"}, "9": {"slack": false, "load": true, "name": "N66", "type": "real-cuerva"}, "10": {"slack": false, "load": true, "name": "N74", "type": "real-cuerva"}, "11": {"slack": false, "load": true, "name": "N76", "type": "real-cuerva"}, "12": {"slack": false, "load": true, "name": "N8", "type": "real-cuerva"}, "13": {"slack": false, "load": true, "name": "N40", "type": "real-cuerva"}, "14": {"slack": false, "load": true, "name": "N59", "type": "real-cuerva"}, "15": {"slack": false, "load": true, "name": "N77", "type": "real-cuerva"}, "16": {"slack": false, "load": false, "name": "N108", "type": "real-cuerva"}, "17": {"slack": false, "load": false, "name": "N118", "type": "real-cuerva"}, "18": {"slack": false, "load": true, "name": "N18", "type": "real-cuerva"}, "19": {"slack": false, "load": true, "name": "N27", "type": "real-cuerva"}, "20": {"slack": false, "load": false, "name": "N57", "type": "real-cuerva"}, "21": {"slack": false, "load": false, "name": "N109", "type": "real-cuerva"}, "22": {"slack": false, "load": false, "name": "N119", "type": "real-cuerva"}, "23": {"slack": false, "load": false, "name": "N12", "type": "real-cuerva"}, "24": {"slack": false, "load": true, "name": "N21", "type": "real-cuerva"}, "25": {"slack": false, "load": false, "name": "N58", "type": "real-cuerva"}, "26": {"slack": false, "load": true, "name": "N129", "type": "real-cuerva"}, "27": {"slack": false, "load": true, "name": "N144", "type": "real-cuerva"}, "28": {"slack": false, "load": false, "name": "N88", "type": "real-cuerva"}, "29": {"slack": false, "load": true, "name": "N75", "type": "real-cuerva"}, "30": {"slack": false, "load": true, "name": "N15", "type": "real-cuerva"}, "31": {"slack": false, "load": true, "name": "N22", "type": "real-cuerva"}, "32": {"slack": false, "load": true, "name": "N36", "type": "real-cuerva"}, "33": {"slack": false, "load": false, "name": "N60", "type": "real-cuerva"}, "34": {"slack": false, "load": true, "name": "N87", "type": "real-cuerva"}, "35": {"slack": false, "load": true, "name": "N160", "type": "real-cuerva"}, "36": {"slack": false, "load": false, "name": "N111", "type": "real-cuerva"}, "37": {"slack": false, "load": false, "name": "N140", "type": "real-cuerva"}, "38": {"slack": false, "load": true, "name": "N19", "type": "real-cuerva"}, "39": {"slack": false, "load": true, "name": "N37", "type": "real-cuerva"}, "40": {"slack": false, "load": true, "name": "N28", "type": "real-cuerva"}, "41": {"slack": false, "load": true, "name": "N61", "type": "real-cuerva"}, "42": {"slack": false, "load": true, "name": "N110", "type": "real-cuerva"}, "43": {"slack": false, "load": false, "name": "N114", "type": "real-cuerva"}, "44": {"slack": false, "load": false, "name": "N68", "type": "real-cuerva"}, "45": {"slack": false, "load": false, "name": "N141", "type": "real-cuerva"}, "46": {"slack": false, "load": true, "name": "N16", "type": "real-cuerva"}, "47": {"slack": false, "load": true, "name": "N46", "type": "real-cuerva"}, "48": {"slack": false, "load": true, "name": "N35", "type": "real-cuerva"}, "49": {"slack": false, "load": true, "name": "N64", "type": "real-cuerva"}, "50": {"slack": false, "load": true, "name": "N67", "type": "real-cuerva"}, "51": {"slack": false, "load": false, "name": "N94", "type": "real-cuerva"}, "52": {"slack": false, "load": false, "name": "N96", "type": "real-cuerva"}, "53": {"slack": false, "load": false, "name": "N142", "type": "real-cuerva"}, "54": {"slack": false, "load": false, "name": "N11", "type": "real-cuerva"}, "55": {"slack": false, "load": true, "name": "N49", "type": "real-cuerva"}, "56": {"slack": false, "load": true, "name": "N95", "type": "real-cuerva"}, "57": {"slack": false, "load": true, "name": "N131", "type": "real-cuerva"}, "58": {"slack": false, "load": false, "name": "N92", "type": "real-cuerva"}, "59": {"slack": false, "load": true, "name": "N13", "type": "real-cuerva"}, "60": {"slack": false, "load": true, "name": "N45", "type": "real-cuerva"}, "61": {"slack": false, "load": true, "name": "N91", "type": "real-cuerva"}, "62": {"slack": false, "load": true, "name": "N153", "type": "real-cuerva"}, "63": {"slack": false, "load": false, "name": "N122", "type": "real-cuerva"}, "64": {"slack": false, "load": false, "name": "N20", "type": "real-cuerva"}, "65": {"slack": false, "load": true, "name": "N30", "type": "real-cuerva"}, "66": {"slack": false, "load": false, "name": "N80", "type": "real-cuerva"}, "67": {"slack": false, "load": false, "name": "N115", "type": "real-cuerva"}, "68": {"slack": false, "load": false, "name": "N123", "type": "real-cuerva"}, "69": {"slack": false, "load": false, "name": "N6", "type": "real-cuerva"}, "70": {"slack": false, "load": true, "name": "N34", "type": "real-cuerva"}, "71": {"slack": false, "load": false, "name": "N81", "type": "real-cuerva"}, "72": {"slack": false, "load": false, "name": "N116", "type": "real-cuerva"}, "73": {"slack": false, "load": false, "name": "N124", "type": "real-cuerva"}, "74": {"slack": false, "load": true, "name": "N7", "type": "real-cuerva"}, "75": {"slack": false, "load": true, "name": "N14", "type": "real-cuerva"}, "76": {"slack": false, "load": false, "name": "N54", "type": "real-cuerva"}, "77": {"slack": false, "load": false, "name": "N82", "type": "real-cuerva"}, "78": {"slack": false, "load": false, "name": "N113", "type": "real-cuerva"}, "79": {"slack": false, "load": true, "name": "N159", "type": "real-cuerva"}, "80": {"slack": false, "load": true, "name": "N104", "type": "real-cuerva"}, "81": {"slack": false, "load": false, "name": "N17", "type": "real-cuerva"}, "82": {"slack": false, "load": false, "name": "N55", "type": "real-cuerva"}, "83": {"slack": false, "load": false, "name": "N84", "type": "real-cuerva"}, "84": {"slack": false, "load": true, "name": "N112", "type": "real-cuerva"}, "85": {"slack": false, "load": false, "name": "N135", "type": "real-cuerva"}, "86": {"slack": false, "load": false, "name": "N79", "type": "real-cuerva"}, "87": {"slack": false, "load": false, "name": "N143", "type": "real-cuerva"}, "88": {"slack": false, "load": true, "name": "N155", "type": "real-cuerva"}, "89": {"slack": false, "load": true, "name": "N5", "type": "real-cuerva"}, "90": {"slack": false, "load": false, "name": "N56", "type": "real-cuerva"}, "91": {"slack": false, "load": true, "name": "N125", "type": "real-cuerva"}, "92": {"slack": false, "load": true, "name": "N151", "type": "real-cuerva"}, "93": {"slack": false, "load": true, "name": "N78", "type": "real-cuerva"}, "94": {"slack": false, "load": true, "name": "N100", "type": "real-cuerva"}, "95": {"slack": false, "load": true, "name": "N145", "type": "real-cuerva"}, "96": {"slack": false, "load": false, "name": "N138", "type": "real-cuerva"}, "97": {"slack": false, "load": false, "name": "N98", "type": "real-cuerva"}, "98": {"slack": false, "load": true, "name": "N132", "type": "real-cuerva"}, "99": {"slack": false, "load": true, "name": "N158", "type": "real-cuerva"}, "100": {"slack": false, "load": true, "name": "N150", "type": "real-cuerva"}, "101": {"slack": false, "load": false, "name": "N4", "type": "real-cuerva"}, "102": {"slack": false, "load": false, "name": "N33", "type": "real-cuerva"}, "103": {"slack": false, "load": true, "name": "N52", "type": "real-cuerva"}, "104": {"slack": false, "load": true, "name": "N107", "type": "real-cuerva"}, "105": {"slack": false, "load": true, "name": "N93", "type": "real-cuerva"}, "106": {"slack": false, "load": true, "name": "N157", "type": "real-cuerva"}, "107": {"slack": false, "load": false, "name": "N136", "type": "real-cuerva"}, "108": {"slack": false, "load": false, "name": "N146", "type": "real-cuerva"}, "109": {"slack": false, "load": true, "name": "N152", "type": "real-cuerva"}, "110": {"slack": false, "load": false, "name": "N86", "type": "real-cuerva"}, "111": {"slack": false, "load": false, "name": "N99", "type": "real-cuerva"}, "112": {"slack": false, "load": true, "name": "N101", "type": "real-cuerva"}, "113": {"slack": false, "load": false, "name": "N3", "type": "real-cuerva"}, "114": {"slack": false, "load": false, "name": "N31", "type": "real-cuerva"}, "115": {"slack": false, "load": true, "name": "N48", "type": "real-cuerva"}, "116": {"slack": false, "load": true, "name": "N53", "type": "real-cuerva"}, "117": {"slack": false, "load": false, "name": "N44", "type": "real-cuerva"}, "118": {"slack": false, "load": true, "name": "N69", "type": "real-cuerva"}, "119": {"slack": false, "load": true, "name": "N137", "type": "real-cuerva"}, "120": {"slack": false, "load": true, "name": "N85", "type": "real-cuerva"}, "121": {"slack": false, "load": false, "name": "N149", "type": "real-cuerva"}, "122": {"slack": false, "load": false, "name": "N121", "type": "real-cuerva"}, "123": {"slack": false, "load": false, "name": "N156", "type": "real-cuerva"}, "124": {"slack": false, "load": true, "name": "N89", "type": "real-cuerva"}, "125": {"slack": false, "load": false, "name": "N1", "type": "real-cuerva"}, "126": {"slack": false, "load": false, "name": "N32", "type": "real-cuerva"}, "127": {"slack": false, "load": true, "name": "N43", "type": "real-cuerva"}, "128": {"slack": false, "load": true, "name": "N161", "type": "real-cuerva"}, "129": {"slack": false, "load": false, "name": "N102", "type": "real-cuerva"}, "130": {"slack": false, "load": false, "name": "N130", "type": "real-cuerva"}, "131": {"slack": false, "load": true, "name": "N120", "type": "real-cuerva"}, "132": {"slack": false, "load": true, "name": "N147", "type": "real-cuerva"}, "133": {"slack": false, "load": true, "name": "N154", "type": "real-cuerva"}, "134": {"slack": false, "load": false, "name": "N105", "type": "real-cuerva"}, "135": {"slack": false, "load": true, "name": "N134", "type": "real-cuerva"}, "136": {"slack": false, "load": true, "name": "N148", "type": "real-cuerva"}, "137": {"slack": false, "load": true, "name": "N90", "type": "real-cuerva"}, "138": {"slack": false, "load": true, "name": "N2", "type": "real-cuerva"}, "139": {"slack": false, "load": true, "name": "N39", "type": "real-cuerva"}, "140": {"slack": false, "load": true, "name": "N50", "type": "real-cuerva"}, "141": {"slack": false, "load": true, "name": "N103", "type": "real-cuerva"}, "142": {"slack": false, "load": true, "name": "N126", "type": "real-cuerva"}, "143": {"slack": false, "load": false, "name": "N106", "type": "real-cuerva"}, "144": {"slack": false, "load": true, "name": "N128", "type": "real-cuerva"}, "145": {"slack": false, "load": true, "name": "N139", "type": "real-cuerva"}, "146": {"slack": false, "load": true, "name": "N26", "type": "real-cuerva"}, "147": {"slack": false, "load": true, "name": "N42", "type": "real-cuerva"}, "148": {"slack": false, "load": false, "name": "N51", "type": "real-cuerva"}, "149": {"slack": false, "load": true, "name": "N127", "type": "real-cuerva"}}, "branch": {"0": {"type": "CUERVA-0", "nodefrom": 0, "nodeto": 1, "length": 1.0}, "1": {"type": "CUERVA-1", "nodefrom": 0, "nodeto": 2, "length": 1.0}, "2": {"type": "CUERVA-2", "nodefrom": 0, "nodeto": 3, "length": 1.0}, "3": {"type": "CUERVA-3", "nodefrom": 0, "nodeto": 4, "length": 1.0}, "4": {"type": "CUERVA-4", "nodefrom": 0, "nodeto": 5, "length": 1.0}, "5": {"type": "CUERVA-5", "nodefrom": 1, "nodeto": 6, "length": 1.0}, "6": {"type": "CUERVA-6", "nodefrom": 2, "nodeto": 7, "length": 1.0}, "7": {"type": "CUERVA-7", "nodefrom": 3, "nodeto": 8, "length": 1.0}, "8": {"type": "CUERVA-8", "nodefrom": 3, "nodeto": 9, "length": 1.0}, "9": {"type": "CUERVA-9", "nodefrom": 4, "nodeto": 10, "length": 1.0}, "10": {"type": "CUERVA-10", "nodefrom": 5, "nodeto": 11, "length": 1.0}, "11": {"type": "CUERVA-11", "nodefrom": 6, "nodeto": 12, "length": 1.0}, "12": {"type": "CUERVA-12", "nodefrom": 7, "nodeto": 13, "length": 1.0}, "13": {"type": "CUERVA-13", "nodefrom": 9, "nodeto": 14, "length": 1.0}, "14": {"type": "CUERVA-14", "nodefrom": 10, "nodeto": 15, "length": 1.0}, "15": {"type": "CUERVA-15", "nodefrom": 10, "nodeto": 16, "length": 1.0}, "16": {"type": "CUERVA-16", "nodefrom": 11, "nodeto": 17, "length": 1.0}, "17": {"type": "CUERVA-5", "nodefrom": 12, "nodeto": 18, "length": 1.0}, "18": {"type": "CUERVA-17", "nodefrom": 13, "nodeto": 19, "length": 1.0}, "19": {"type": "CUERVA-18", "nodefrom": 14, "nodeto": 20, "length": 1.0}, "20": {"type": "CUERVA-19", "nodefrom": 16, "nodeto": 21, "length": 1.0}, "21": {"type": "CUERVA-20", "nodefrom": 17, "nodeto": 22, "length": 1.0}, "22": {"type": "CUERVA-21", "nodefrom": 18, "nodeto": 23, "length": 1.0}, "23": {"type": "CUERVA-12", "nodefrom": 19, "nodeto": 24, "length": 1.0}, "24": {"type": "CUERVA-22", "nodefrom": 20, "nodeto": 25, "length": 1.0}, "25": {"type": "CUERVA-23", "nodefrom": 26, "nodeto": 21, "length": 1.0}, "26": {"type": "CUERVA-24", "nodefrom": 27, "nodeto": 21, "length": 1.0}, "27": {"type": "CUERVA-25", "nodefrom": 21, "nodeto": 28, "length": 1.0}, "28": {"type": "CUERVA-26", "nodefrom": 22, "nodeto": 29, "length": 1.0}, "29": {"type": "CUERVA-27", "nodefrom": 23, "nodeto": 30, "length": 1.0}, "30": {"type": "CUERVA-28", "nodefrom": 24, "nodeto": 31, "length": 1.0}, "31": {"type": "CUERVA-29", "nodefrom": 24, "nodeto": 32, "length": 1.0}, "32": {"type": "CUERVA-30", "nodefrom": 25, "nodeto": 33, "length": 1.0}, "33": {"type": "CUERVA-23", "nodefrom": 34, "nodeto": 28, "length": 1.0}, "34": {"type": "CUERVA-24", "nodefrom": 35, "nodeto": 28, "length": 1.0}, "35": {"type": "CUERVA-31", "nodefrom": 28, "nodeto": 36, "length": 1.0}, "36": {"type": "CUERVA-32", "nodefrom": 29, "nodeto": 37, "length": 1.0}, "37": {"type": "CUERVA-33", "nodefrom": 30, "nodeto": 38, "length": 1.0}, "38": {"type": "CUERVA-34", "nodefrom": 32, "nodeto": 39, "length": 1.0}, "39": {"type": "CUERVA-29", "nodefrom": 32, "nodeto": 40, "length": 1.0}, "40": {"type": "CUERVA-35", "nodefrom": 33, "nodeto": 41, "length": 1.0}, "41": {"type": "CUERVA-23", "nodefrom": 42, "nodeto": 36, "length": 1.0}, "42": {"type": "CUERVA-24", "nodefrom": 43, "nodeto": 36, "length": 1.0}, "43": {"type": "CUERVA-25", "nodefrom": 36, "nodeto": 44, "length": 1.0}, "44": {"type": "CUERVA-36", "nodefrom": 37, "nodeto": 45, "length": 1.0}, "45": {"type": "CUERVA-11", "nodefrom": 38, "nodeto": 46, "length": 1.0}, "46": {"type": "CUERVA-14", "nodefrom": 40, "nodeto": 47, "length": 1.0}, "47": {"type": "CUERVA-37", "nodefrom": 40, "nodeto": 48, "length": 1.0}, "48": {"type": "CUERVA-38", "nodefrom": 41, "nodeto": 49, "length": 1.0}, "49": {"type": "CUERVA-23", "nodefrom": 50, "nodeto": 44, "length": 1.0}, "50": {"type": "CUERVA-24", "nodefrom": 51, "nodeto": 44, "length": 1.0}, "51": {"type": "CUERVA-31", "nodefrom": 44, "nodeto": 52, "length": 1.0}, "52": {"type": "CUERVA-39", "nodefrom": 45, "nodeto": 53, "length": 1.0}, "53": {"type": "CUERVA-5", "nodefrom": 46, "nodeto": 54, "length": 1.0}, "54": {"type": "CUERVA-6", "nodefrom": 48, "nodeto": 55, "length": 1.0}, "55": {"type": "CUERVA-24", "nodefrom": 56, "nodeto": 52, "length": 1.0}, "56": {"type": "CUERVA-23", "nodefrom": 57, "nodeto": 52, "length": 1.0}, "57": {"type": "CUERVA-25", "nodefrom": 52, "nodeto": 58, "length": 1.0}, "58": {"type": "CUERVA-5", "nodefrom": 54, "nodeto": 59, "length": 1.0}, "59": {"type": "CUERVA-29", "nodefrom": 55, "nodeto": 60, "length": 1.0}, "60": {"type": "CUERVA-23", "nodefrom": 61, "nodeto": 58, "length": 1.0}, "61": {"type": "CUERVA-24", "nodefrom": 62, "nodeto": 58, "length": 1.0}, "62": {"type": "CUERVA-40", "nodefrom": 58, "nodeto": 63, "length": 1.0}, "63": {"type": "CUERVA-27", "nodefrom": 59, "nodeto": 64, "length": 1.0}, "64": {"type": "CUERVA-6", "nodefrom": 60, "nodeto": 65, "length": 1.0}, "65": {"type": "CUERVA-41", "nodefrom": 63, "nodeto": 66, "length": 1.0}, "66": {"type": "CUERVA-42", "nodefrom": 63, "nodeto": 67, "length": 1.0}, "67": {"type": "CUERVA-43", "nodefrom": 63, "nodeto": 68, "length": 1.0}, "68": {"type": "CUERVA-21", "nodefrom": 64, "nodeto": 69, "length": 1.0}, "69": {"type": "CUERVA-44", "nodefrom": 65, "nodeto": 70, "length": 1.0}, "70": {"type": "CUERVA-45", "nodefrom": 66, "nodeto": 71, "length": 1.0}, "71": {"type": "CUERVA-46", "nodefrom": 67, "nodeto": 72, "length": 1.0}, "72": {"type": "CUERVA-47", "nodefrom": 68, "nodeto": 73, "length": 1.0}, "73": {"type": "CUERVA-48", "nodefrom": 69, "nodeto": 74, "length": 1.0}, "74": {"type": "CUERVA-49", "nodefrom": 69, "nodeto": 75, "length": 1.0}, "75": {"type": "CUERVA-50", "nodefrom": 70, "nodeto": 76, "length": 1.0}, "76": {"type": "CUERVA-51", "nodefrom": 71, "nodeto": 77, "length": 1.0}, "77": {"type": "CUERVA-52", "nodefrom": 72, "nodeto": 78, "length": 1.0}, "78": {"type": "CUERVA-53", "nodefrom": 73, "nodeto": 79, "length": 1.0}, "79": {"type": "CUERVA-54", "nodefrom": 73, "nodeto": 80, "length": 1.0}, "80": {"type": "CUERVA-55", "nodefrom": 75, "nodeto": 81, "length": 1.0}, "81": {"type": "CUERVA-2", "nodefrom": 76, "nodeto": 82, "length": 1.0}, "82": {"type": "CUERVA-31", "nodefrom": 77, "nodeto": 83, "length": 1.0}, "83": {"type": "CUERVA-56", "nodefrom": 84, "nodeto": 78, "length": 1.0}, "84": {"type": "CUERVA-23", "nodefrom": 85, "nodeto": 78, "length": 1.0}, "85": {"type": "CUERVA-57", "nodefrom": 78, "nodeto": 86, "length": 1.0}, "86": {"type": "CUERVA-58", "nodefrom": 80, "nodeto": 87, "length": 1.0}, "87": {"type": "CUERVA-59", "nodefrom": 80, "nodeto": 88, "length": 1.0}, "88": {"type": "CUERVA-60", "nodefrom": 81, "nodeto": 89, "length": 1.0}, "89": {"type": "CUERVA-4", "nodefrom": 82, "nodeto": 90, "length": 1.0}, "90": {"type": "CUERVA-61", "nodefrom": 83, "nodeto": 91, "length": 1.0}, "91": {"type": "CUERVA-62", "nodefrom": 83, "nodeto": 92, "length": 1.0}, "92": {"type": "CUERVA-63", "nodefrom": 93, "nodeto": 86, "length": 1.0}, "93": {"type": "CUERVA-64", "nodefrom": 94, "nodeto": 86, "length": 1.0}, "94": {"type": "CUERVA-65", "nodefrom": 86, "nodeto": 95, "length": 1.0}, "95": {"type": "CUERVA-57", "nodefrom": 86, "nodeto": 96, "length": 1.0}, "96": {"type": "CUERVA-66", "nodefrom": 87, "nodeto": 97, "length": 1.0}, "97": {"type": "CUERVA-67", "nodefrom": 87, "nodeto": 98, "length": 1.0}, "98": {"type": "CUERVA-68", "nodefrom": 87, "nodeto": 99, "length": 1.0}, "99": {"type": "CUERVA-69", "nodefrom": 88, "nodeto": 100, "length": 1.0}, "100": {"type": "CUERVA-70", "nodefrom": 89, "nodeto": 101, "length": 1.0}, "101": {"type": "CUERVA-71", "nodefrom": 90, "nodeto": 102, "length": 1.0}, "102": {"type": "CUERVA-72", "nodefrom": 90, "nodeto": 103, "length": 1.0}, "103": {"type": "CUERVA-73", "nodefrom": 92, "nodeto": 104, "length": 1.0}, "104": {"type": "CUERVA-74", "nodefrom": 92, "nodeto": 105, "length": 1.0}, "105": {"type": "CUERVA-75", "nodefrom": 92, "nodeto": 106, "length": 1.0}, "106": {"type": "CUERVA-76", "nodefrom": 96, "nodeto": 107, "length": 1.0}, "107": {"type": "CUERVA-56", "nodefrom": 108, "nodeto": 96, "length": 1.0}, "108": {"type": "CUERVA-24", "nodefrom": 109, "nodeto": 96, "length": 1.0}, "109": {"type": "CUERVA-77", "nodefrom": 96, "nodeto": 110, "length": 1.0}, "110": {"type": "CUERVA-78", "nodefrom": 97, "nodeto": 111, "length": 1.0}, "111": {"type": "CUERVA-79", "nodefrom": 100, "nodeto": 112, "length": 1.0}, "112": {"type": "CUERVA-80", "nodefrom": 101, "nodeto": 113, "length": 1.0}, "113": {"type": "CUERVA-71", "nodefrom": 102, "nodeto": 114, "length": 1.0}, "114": {"type": "CUERVA-81", "nodefrom": 102, "nodeto": 115, "length": 1.0}, "115": {"type": "CUERVA-82", "nodefrom": 103, "nodeto": 116, "length": 1.0}, "116": {"type": "CUERVA-83", "nodefrom": 103, "nodeto": 117, "length": 1.0}, "117": {"type": "CUERVA-84", "nodefrom": 104, "nodeto": 118, "length": 1.0}, "118": {"type": "CUERVA-85", "nodefrom": 107, "nodeto": 119, "length": 1.0}, "119": {"type": "CUERVA-24", "nodefrom": 120, "nodeto": 110, "length": 1.0}, "120": {"type": "CUERVA-23", "nodefrom": 121, "nodeto": 110, "length": 1.0}, "121": {"type": "CUERVA-57", "nodefrom": 110, "nodeto": 122, "length": 1.0}, "122": {"type": "CUERVA-86", "nodefrom": 111, "nodeto": 123, "length": 1.0}, "123": {"type": "CUERVA-87", "nodefrom": 111, "nodeto": 124, "length": 1.0}, "124": {"type": "CUERVA-88", "nodefrom": 113, "nodeto": 125, "length": 1.0}, "125": {"type": "CUERVA-89", "nodefrom": 114, "nodeto": 126, "length": 1.0}, "126": {"type": "CUERVA-90", "nodefrom": 127, "nodeto": 117, "length": 1.0}, "127": {"type": "CUERVA-91", "nodefrom": 117, "nodeto": 128, "length": 1.0}, "128": {"type": "CUERVA-92", "nodefrom": 118, "nodeto": 129, "length": 1.0}, "129": {"type": "CUERVA-93", "nodefrom": 118, "nodeto": 130, "length": 1.0}, "130": {"type": "CUERVA-23", "nodefrom": 131, "nodeto": 122, "length": 1.0}, "131": {"type": "CUERVA-24", "nodefrom": 132, "nodeto": 122, "length": 1.0}, "132": {"type": "CUERVA-94", "nodefrom": 122, "nodeto": 133, "length": 1.0}, "133": {"type": "CUERVA-95", "nodefrom": 122, "nodeto": 134, "length": 1.0}, "134": {"type": "CUERVA-96", "nodefrom": 123, "nodeto": 135, "length": 1.0}, "135": {"type": "CUERVA-97", "nodefrom": 123, "nodeto": 136, "length": 1.0}, "136": {"type": "CUERVA-98", "nodefrom": 137, "nodeto": 124, "length": 1.0}, "137": {"type": "CUERVA-99", "nodefrom": 125, "nodeto": 138, "length": 1.0}, "138": {"type": "CUERVA-100", "nodefrom": 128, "nodeto": 139, "length": 1.0}, "139": {"type": "CUERVA-101", "nodefrom": 128, "nodeto": 140, "length": 1.0}, "140": {"type": "CUERVA-102", "nodefrom": 129, "nodeto": 141, "length": 1.0}, "141": {"type": "CUERVA-43", "nodefrom": 130, "nodeto": 142, "length": 1.0}, "142": {"type": "CUERVA-103", "nodefrom": 134, "nodeto": 143, "length": 1.0}, "143": {"type": "CUERVA-23", "nodefrom": 144, "nodeto": 134, "length": 1.0}, "144": {"type": "CUERVA-24", "nodefrom": 145, "nodeto": 134, "length": 1.0}, "145": {"type": "CUERVA-104", "nodefrom": 140, "nodeto": 146, "length": 1.0}, "146": {"type": "CUERVA-90", "nodefrom": 140, "nodeto": 147, "length": 1.0}, "147": {"type": "CUERVA-105", "nodefrom": 140, "nodeto": 148, "length": 1.0}, "148": {"type": "CUERVA-106", "nodefrom": 142, "nodeto": 149, "length": 1.0}}}}
+{
+    "network": {
+        "bus": {
+            "0": {
+                "slack": true,
+                "load": false,
+                "name": "N65",
+                "type": "real-cuerva"
+            },
+            "1": {
+                "slack": false,
+                "load": true,
+                "name": "N10",
+                "type": "real-cuerva"
+            },
+            "2": {
+                "slack": false,
+                "load": true,
+                "name": "N23",
+                "type": "real-cuerva"
+            },
+            "3": {
+                "slack": false,
+                "load": false,
+                "name": "N62",
+                "type": "real-cuerva"
+            },
+            "4": {
+                "slack": false,
+                "load": false,
+                "name": "N73",
+                "type": "real-cuerva"
+            },
+            "5": {
+                "slack": false,
+                "load": false,
+                "name": "N117",
+                "type": "real-cuerva"
+            },
+            "6": {
+                "slack": false,
+                "load": true,
+                "name": "N0",
+                "type": "real-cuerva"
+            },
+            "7": {
+                "slack": false,
+                "load": true,
+                "name": "N29",
+                "type": "real-cuerva"
+            },
+            "8": {
+                "slack": false,
+                "load": true,
+                "name": "N63",
+                "type": "real-cuerva"
+            },
+            "9": {
+                "slack": false,
+                "load": true,
+                "name": "N66",
+                "type": "real-cuerva"
+            },
+            "10": {
+                "slack": false,
+                "load": true,
+                "name": "N74",
+                "type": "real-cuerva"
+            },
+            "11": {
+                "slack": false,
+                "load": true,
+                "name": "N76",
+                "type": "real-cuerva"
+            },
+            "12": {
+                "slack": false,
+                "load": true,
+                "name": "N8",
+                "type": "real-cuerva"
+            },
+            "13": {
+                "slack": false,
+                "load": true,
+                "name": "N40",
+                "type": "real-cuerva"
+            },
+            "14": {
+                "slack": false,
+                "load": true,
+                "name": "N59",
+                "type": "real-cuerva"
+            },
+            "15": {
+                "slack": false,
+                "load": true,
+                "name": "N77",
+                "type": "real-cuerva"
+            },
+            "16": {
+                "slack": false,
+                "load": false,
+                "name": "N108",
+                "type": "real-cuerva"
+            },
+            "17": {
+                "slack": false,
+                "load": false,
+                "name": "N118",
+                "type": "real-cuerva"
+            },
+            "18": {
+                "slack": false,
+                "load": true,
+                "name": "N18",
+                "type": "real-cuerva"
+            },
+            "19": {
+                "slack": false,
+                "load": true,
+                "name": "N27",
+                "type": "real-cuerva"
+            },
+            "20": {
+                "slack": false,
+                "load": false,
+                "name": "N57",
+                "type": "real-cuerva"
+            },
+            "21": {
+                "slack": false,
+                "load": false,
+                "name": "N109",
+                "type": "real-cuerva"
+            },
+            "22": {
+                "slack": false,
+                "load": false,
+                "name": "N119",
+                "type": "real-cuerva"
+            },
+            "23": {
+                "slack": false,
+                "load": false,
+                "name": "N12",
+                "type": "real-cuerva"
+            },
+            "24": {
+                "slack": false,
+                "load": true,
+                "name": "N21",
+                "type": "real-cuerva"
+            },
+            "25": {
+                "slack": false,
+                "load": false,
+                "name": "N58",
+                "type": "real-cuerva"
+            },
+            "26": {
+                "slack": false,
+                "load": true,
+                "name": "N129",
+                "type": "real-cuerva"
+            },
+            "27": {
+                "slack": false,
+                "load": true,
+                "name": "N144",
+                "type": "real-cuerva"
+            },
+            "28": {
+                "slack": false,
+                "load": false,
+                "name": "N88",
+                "type": "real-cuerva"
+            },
+            "29": {
+                "slack": false,
+                "load": true,
+                "name": "N75",
+                "type": "real-cuerva"
+            },
+            "30": {
+                "slack": false,
+                "load": true,
+                "name": "N15",
+                "type": "real-cuerva"
+            },
+            "31": {
+                "slack": false,
+                "load": true,
+                "name": "N22",
+                "type": "real-cuerva"
+            },
+            "32": {
+                "slack": false,
+                "load": true,
+                "name": "N36",
+                "type": "real-cuerva"
+            },
+            "33": {
+                "slack": false,
+                "load": false,
+                "name": "N60",
+                "type": "real-cuerva"
+            },
+            "34": {
+                "slack": false,
+                "load": true,
+                "name": "N87",
+                "type": "real-cuerva"
+            },
+            "35": {
+                "slack": false,
+                "load": true,
+                "name": "N160",
+                "type": "real-cuerva"
+            },
+            "36": {
+                "slack": false,
+                "load": false,
+                "name": "N111",
+                "type": "real-cuerva"
+            },
+            "37": {
+                "slack": false,
+                "load": false,
+                "name": "N140",
+                "type": "real-cuerva"
+            },
+            "38": {
+                "slack": false,
+                "load": true,
+                "name": "N19",
+                "type": "real-cuerva"
+            },
+            "39": {
+                "slack": false,
+                "load": true,
+                "name": "N37",
+                "type": "real-cuerva"
+            },
+            "40": {
+                "slack": false,
+                "load": true,
+                "name": "N28",
+                "type": "real-cuerva"
+            },
+            "41": {
+                "slack": false,
+                "load": true,
+                "name": "N61",
+                "type": "real-cuerva"
+            },
+            "42": {
+                "slack": false,
+                "load": true,
+                "name": "N110",
+                "type": "real-cuerva"
+            },
+            "43": {
+                "slack": false,
+                "load": false,
+                "name": "N114",
+                "type": "real-cuerva"
+            },
+            "44": {
+                "slack": false,
+                "load": false,
+                "name": "N68",
+                "type": "real-cuerva"
+            },
+            "45": {
+                "slack": false,
+                "load": false,
+                "name": "N141",
+                "type": "real-cuerva"
+            },
+            "46": {
+                "slack": false,
+                "load": true,
+                "name": "N16",
+                "type": "real-cuerva"
+            },
+            "47": {
+                "slack": false,
+                "load": true,
+                "name": "N46",
+                "type": "real-cuerva"
+            },
+            "48": {
+                "slack": false,
+                "load": true,
+                "name": "N35",
+                "type": "real-cuerva"
+            },
+            "49": {
+                "slack": false,
+                "load": true,
+                "name": "N64",
+                "type": "real-cuerva"
+            },
+            "50": {
+                "slack": false,
+                "load": true,
+                "name": "N67",
+                "type": "real-cuerva"
+            },
+            "51": {
+                "slack": false,
+                "load": false,
+                "name": "N94",
+                "type": "real-cuerva"
+            },
+            "52": {
+                "slack": false,
+                "load": false,
+                "name": "N96",
+                "type": "real-cuerva"
+            },
+            "53": {
+                "slack": false,
+                "load": false,
+                "name": "N142",
+                "type": "real-cuerva"
+            },
+            "54": {
+                "slack": false,
+                "load": false,
+                "name": "N11",
+                "type": "real-cuerva"
+            },
+            "55": {
+                "slack": false,
+                "load": true,
+                "name": "N49",
+                "type": "real-cuerva"
+            },
+            "56": {
+                "slack": false,
+                "load": true,
+                "name": "N95",
+                "type": "real-cuerva"
+            },
+            "57": {
+                "slack": false,
+                "load": true,
+                "name": "N131",
+                "type": "real-cuerva"
+            },
+            "58": {
+                "slack": false,
+                "load": false,
+                "name": "N92",
+                "type": "real-cuerva"
+            },
+            "59": {
+                "slack": false,
+                "load": true,
+                "name": "N13",
+                "type": "real-cuerva"
+            },
+            "60": {
+                "slack": false,
+                "load": true,
+                "name": "N45",
+                "type": "real-cuerva"
+            },
+            "61": {
+                "slack": false,
+                "load": true,
+                "name": "N91",
+                "type": "real-cuerva"
+            },
+            "62": {
+                "slack": false,
+                "load": true,
+                "name": "N153",
+                "type": "real-cuerva"
+            },
+            "63": {
+                "slack": false,
+                "load": false,
+                "name": "N122",
+                "type": "real-cuerva"
+            },
+            "64": {
+                "slack": false,
+                "load": false,
+                "name": "N20",
+                "type": "real-cuerva"
+            },
+            "65": {
+                "slack": false,
+                "load": true,
+                "name": "N30",
+                "type": "real-cuerva"
+            },
+            "66": {
+                "slack": false,
+                "load": false,
+                "name": "N80",
+                "type": "real-cuerva"
+            },
+            "67": {
+                "slack": false,
+                "load": false,
+                "name": "N115",
+                "type": "real-cuerva"
+            },
+            "68": {
+                "slack": false,
+                "load": false,
+                "name": "N123",
+                "type": "real-cuerva"
+            },
+            "69": {
+                "slack": false,
+                "load": false,
+                "name": "N6",
+                "type": "real-cuerva"
+            },
+            "70": {
+                "slack": false,
+                "load": true,
+                "name": "N34",
+                "type": "real-cuerva"
+            },
+            "71": {
+                "slack": false,
+                "load": false,
+                "name": "N81",
+                "type": "real-cuerva"
+            },
+            "72": {
+                "slack": false,
+                "load": false,
+                "name": "N116",
+                "type": "real-cuerva"
+            },
+            "73": {
+                "slack": false,
+                "load": false,
+                "name": "N124",
+                "type": "real-cuerva"
+            },
+            "74": {
+                "slack": false,
+                "load": true,
+                "name": "N7",
+                "type": "real-cuerva"
+            },
+            "75": {
+                "slack": false,
+                "load": true,
+                "name": "N14",
+                "type": "real-cuerva"
+            },
+            "76": {
+                "slack": false,
+                "load": false,
+                "name": "N54",
+                "type": "real-cuerva"
+            },
+            "77": {
+                "slack": false,
+                "load": false,
+                "name": "N82",
+                "type": "real-cuerva"
+            },
+            "78": {
+                "slack": false,
+                "load": false,
+                "name": "N113",
+                "type": "real-cuerva"
+            },
+            "79": {
+                "slack": false,
+                "load": true,
+                "name": "N159",
+                "type": "real-cuerva"
+            },
+            "80": {
+                "slack": false,
+                "load": true,
+                "name": "N104",
+                "type": "real-cuerva"
+            },
+            "81": {
+                "slack": false,
+                "load": false,
+                "name": "N17",
+                "type": "real-cuerva"
+            },
+            "82": {
+                "slack": false,
+                "load": false,
+                "name": "N55",
+                "type": "real-cuerva"
+            },
+            "83": {
+                "slack": false,
+                "load": false,
+                "name": "N84",
+                "type": "real-cuerva"
+            },
+            "84": {
+                "slack": false,
+                "load": true,
+                "name": "N112",
+                "type": "real-cuerva"
+            },
+            "85": {
+                "slack": false,
+                "load": false,
+                "name": "N135",
+                "type": "real-cuerva"
+            },
+            "86": {
+                "slack": false,
+                "load": false,
+                "name": "N79",
+                "type": "real-cuerva"
+            },
+            "87": {
+                "slack": false,
+                "load": false,
+                "name": "N143",
+                "type": "real-cuerva"
+            },
+            "88": {
+                "slack": false,
+                "load": true,
+                "name": "N155",
+                "type": "real-cuerva"
+            },
+            "89": {
+                "slack": false,
+                "load": true,
+                "name": "N5",
+                "type": "real-cuerva"
+            },
+            "90": {
+                "slack": false,
+                "load": false,
+                "name": "N56",
+                "type": "real-cuerva"
+            },
+            "91": {
+                "slack": false,
+                "load": true,
+                "name": "N125",
+                "type": "real-cuerva"
+            },
+            "92": {
+                "slack": false,
+                "load": true,
+                "name": "N151",
+                "type": "real-cuerva"
+            },
+            "93": {
+                "slack": false,
+                "load": true,
+                "name": "N78",
+                "type": "real-cuerva"
+            },
+            "94": {
+                "slack": false,
+                "load": true,
+                "name": "N100",
+                "type": "real-cuerva"
+            },
+            "95": {
+                "slack": false,
+                "load": true,
+                "name": "N145",
+                "type": "real-cuerva"
+            },
+            "96": {
+                "slack": false,
+                "load": false,
+                "name": "N138",
+                "type": "real-cuerva"
+            },
+            "97": {
+                "slack": false,
+                "load": false,
+                "name": "N98",
+                "type": "real-cuerva"
+            },
+            "98": {
+                "slack": false,
+                "load": true,
+                "name": "N132",
+                "type": "real-cuerva"
+            },
+            "99": {
+                "slack": false,
+                "load": true,
+                "name": "N158",
+                "type": "real-cuerva"
+            },
+            "100": {
+                "slack": false,
+                "load": true,
+                "name": "N150",
+                "type": "real-cuerva"
+            },
+            "101": {
+                "slack": false,
+                "load": false,
+                "name": "N4",
+                "type": "real-cuerva"
+            },
+            "102": {
+                "slack": false,
+                "load": false,
+                "name": "N33",
+                "type": "real-cuerva"
+            },
+            "103": {
+                "slack": false,
+                "load": true,
+                "name": "N52",
+                "type": "real-cuerva"
+            },
+            "104": {
+                "slack": false,
+                "load": true,
+                "name": "N107",
+                "type": "real-cuerva"
+            },
+            "105": {
+                "slack": false,
+                "load": true,
+                "name": "N93",
+                "type": "real-cuerva"
+            },
+            "106": {
+                "slack": false,
+                "load": true,
+                "name": "N157",
+                "type": "real-cuerva"
+            },
+            "107": {
+                "slack": false,
+                "load": false,
+                "name": "N136",
+                "type": "real-cuerva"
+            },
+            "108": {
+                "slack": false,
+                "load": false,
+                "name": "N146",
+                "type": "real-cuerva"
+            },
+            "109": {
+                "slack": false,
+                "load": true,
+                "name": "N152",
+                "type": "real-cuerva"
+            },
+            "110": {
+                "slack": false,
+                "load": false,
+                "name": "N86",
+                "type": "real-cuerva"
+            },
+            "111": {
+                "slack": false,
+                "load": false,
+                "name": "N99",
+                "type": "real-cuerva"
+            },
+            "112": {
+                "slack": false,
+                "load": true,
+                "name": "N101",
+                "type": "real-cuerva"
+            },
+            "113": {
+                "slack": false,
+                "load": false,
+                "name": "N3",
+                "type": "real-cuerva"
+            },
+            "114": {
+                "slack": false,
+                "load": false,
+                "name": "N31",
+                "type": "real-cuerva"
+            },
+            "115": {
+                "slack": false,
+                "load": true,
+                "name": "N48",
+                "type": "real-cuerva"
+            },
+            "116": {
+                "slack": false,
+                "load": true,
+                "name": "N53",
+                "type": "real-cuerva"
+            },
+            "117": {
+                "slack": false,
+                "load": false,
+                "name": "N44",
+                "type": "real-cuerva"
+            },
+            "118": {
+                "slack": false,
+                "load": true,
+                "name": "N69",
+                "type": "real-cuerva"
+            },
+            "119": {
+                "slack": false,
+                "load": true,
+                "name": "N137",
+                "type": "real-cuerva"
+            },
+            "120": {
+                "slack": false,
+                "load": true,
+                "name": "N85",
+                "type": "real-cuerva"
+            },
+            "121": {
+                "slack": false,
+                "load": false,
+                "name": "N149",
+                "type": "real-cuerva"
+            },
+            "122": {
+                "slack": false,
+                "load": false,
+                "name": "N121",
+                "type": "real-cuerva"
+            },
+            "123": {
+                "slack": false,
+                "load": false,
+                "name": "N156",
+                "type": "real-cuerva"
+            },
+            "124": {
+                "slack": false,
+                "load": true,
+                "name": "N89",
+                "type": "real-cuerva"
+            },
+            "125": {
+                "slack": false,
+                "load": false,
+                "name": "N1",
+                "type": "real-cuerva"
+            },
+            "126": {
+                "slack": false,
+                "load": false,
+                "name": "N32",
+                "type": "real-cuerva"
+            },
+            "127": {
+                "slack": false,
+                "load": true,
+                "name": "N43",
+                "type": "real-cuerva"
+            },
+            "128": {
+                "slack": false,
+                "load": true,
+                "name": "N161",
+                "type": "real-cuerva"
+            },
+            "129": {
+                "slack": false,
+                "load": false,
+                "name": "N102",
+                "type": "real-cuerva"
+            },
+            "130": {
+                "slack": false,
+                "load": false,
+                "name": "N130",
+                "type": "real-cuerva"
+            },
+            "131": {
+                "slack": false,
+                "load": true,
+                "name": "N120",
+                "type": "real-cuerva"
+            },
+            "132": {
+                "slack": false,
+                "load": true,
+                "name": "N147",
+                "type": "real-cuerva"
+            },
+            "133": {
+                "slack": false,
+                "load": true,
+                "name": "N154",
+                "type": "real-cuerva"
+            },
+            "134": {
+                "slack": false,
+                "load": false,
+                "name": "N105",
+                "type": "real-cuerva"
+            },
+            "135": {
+                "slack": false,
+                "load": true,
+                "name": "N134",
+                "type": "real-cuerva"
+            },
+            "136": {
+                "slack": false,
+                "load": true,
+                "name": "N148",
+                "type": "real-cuerva"
+            },
+            "137": {
+                "slack": false,
+                "load": true,
+                "name": "N90",
+                "type": "real-cuerva"
+            },
+            "138": {
+                "slack": false,
+                "load": true,
+                "name": "N2",
+                "type": "real-cuerva"
+            },
+            "139": {
+                "slack": false,
+                "load": true,
+                "name": "N39",
+                "type": "real-cuerva"
+            },
+            "140": {
+                "slack": false,
+                "load": true,
+                "name": "N50",
+                "type": "real-cuerva"
+            },
+            "141": {
+                "slack": false,
+                "load": true,
+                "name": "N103",
+                "type": "real-cuerva"
+            },
+            "142": {
+                "slack": false,
+                "load": true,
+                "name": "N126",
+                "type": "real-cuerva"
+            },
+            "143": {
+                "slack": false,
+                "load": false,
+                "name": "N106",
+                "type": "real-cuerva"
+            },
+            "144": {
+                "slack": false,
+                "load": true,
+                "name": "N128",
+                "type": "real-cuerva"
+            },
+            "145": {
+                "slack": false,
+                "load": true,
+                "name": "N139",
+                "type": "real-cuerva"
+            },
+            "146": {
+                "slack": false,
+                "load": true,
+                "name": "N26",
+                "type": "real-cuerva"
+            },
+            "147": {
+                "slack": false,
+                "load": true,
+                "name": "N42",
+                "type": "real-cuerva"
+            },
+            "148": {
+                "slack": false,
+                "load": false,
+                "name": "N51",
+                "type": "real-cuerva"
+            },
+            "149": {
+                "slack": false,
+                "load": true,
+                "name": "N127",
+                "type": "real-cuerva"
+            }
+        },
+        "branch": {
+            "0": {
+                "type": "CUERVA-0",
+                "nodefrom": 0,
+                "nodeto": 1,
+                "length": 1
+            },
+            "1": {
+                "type": "CUERVA-1",
+                "nodefrom": 0,
+                "nodeto": 2,
+                "length": 1
+            },
+            "2": {
+                "type": "CUERVA-2",
+                "nodefrom": 0,
+                "nodeto": 3,
+                "length": 1
+            },
+            "3": {
+                "type": "CUERVA-3",
+                "nodefrom": 0,
+                "nodeto": 4,
+                "length": 1
+            },
+            "4": {
+                "type": "CUERVA-4",
+                "nodefrom": 0,
+                "nodeto": 5,
+                "length": 1
+            },
+            "5": {
+                "type": "CUERVA-5",
+                "nodefrom": 1,
+                "nodeto": 6,
+                "length": 1
+            },
+            "6": {
+                "type": "CUERVA-6",
+                "nodefrom": 2,
+                "nodeto": 7,
+                "length": 1
+            },
+            "7": {
+                "type": "CUERVA-7",
+                "nodefrom": 3,
+                "nodeto": 8,
+                "length": 1
+            },
+            "8": {
+                "type": "CUERVA-8",
+                "nodefrom": 3,
+                "nodeto": 9,
+                "length": 1
+            },
+            "9": {
+                "type": "CUERVA-9",
+                "nodefrom": 4,
+                "nodeto": 10,
+                "length": 1
+            },
+            "10": {
+                "type": "CUERVA-10",
+                "nodefrom": 5,
+                "nodeto": 11,
+                "length": 1
+            },
+            "11": {
+                "type": "CUERVA-11",
+                "nodefrom": 6,
+                "nodeto": 12,
+                "length": 1
+            },
+            "12": {
+                "type": "CUERVA-12",
+                "nodefrom": 7,
+                "nodeto": 13,
+                "length": 1
+            },
+            "13": {
+                "type": "CUERVA-13",
+                "nodefrom": 9,
+                "nodeto": 14,
+                "length": 1
+            },
+            "14": {
+                "type": "CUERVA-14",
+                "nodefrom": 10,
+                "nodeto": 15,
+                "length": 1
+            },
+            "15": {
+                "type": "CUERVA-15",
+                "nodefrom": 10,
+                "nodeto": 16,
+                "length": 1
+            },
+            "16": {
+                "type": "CUERVA-16",
+                "nodefrom": 11,
+                "nodeto": 17,
+                "length": 1
+            },
+            "17": {
+                "type": "CUERVA-5",
+                "nodefrom": 12,
+                "nodeto": 18,
+                "length": 1
+            },
+            "18": {
+                "type": "CUERVA-17",
+                "nodefrom": 13,
+                "nodeto": 19,
+                "length": 1
+            },
+            "19": {
+                "type": "CUERVA-18",
+                "nodefrom": 14,
+                "nodeto": 20,
+                "length": 1
+            },
+            "20": {
+                "type": "CUERVA-19",
+                "nodefrom": 16,
+                "nodeto": 21,
+                "length": 1
+            },
+            "21": {
+                "type": "CUERVA-20",
+                "nodefrom": 17,
+                "nodeto": 22,
+                "length": 1
+            },
+            "22": {
+                "type": "CUERVA-21",
+                "nodefrom": 18,
+                "nodeto": 23,
+                "length": 1
+            },
+            "23": {
+                "type": "CUERVA-12",
+                "nodefrom": 19,
+                "nodeto": 24,
+                "length": 1
+            },
+            "24": {
+                "type": "CUERVA-22",
+                "nodefrom": 20,
+                "nodeto": 25,
+                "length": 1
+            },
+            "25": {
+                "type": "CUERVA-23",
+                "nodefrom": 26,
+                "nodeto": 21,
+                "length": 1
+            },
+            "26": {
+                "type": "CUERVA-24",
+                "nodefrom": 27,
+                "nodeto": 21,
+                "length": 1
+            },
+            "27": {
+                "type": "CUERVA-25",
+                "nodefrom": 21,
+                "nodeto": 28,
+                "length": 1
+            },
+            "28": {
+                "type": "CUERVA-26",
+                "nodefrom": 22,
+                "nodeto": 29,
+                "length": 1
+            },
+            "29": {
+                "type": "CUERVA-27",
+                "nodefrom": 23,
+                "nodeto": 30,
+                "length": 1
+            },
+            "30": {
+                "type": "CUERVA-28",
+                "nodefrom": 24,
+                "nodeto": 31,
+                "length": 1
+            },
+            "31": {
+                "type": "CUERVA-29",
+                "nodefrom": 24,
+                "nodeto": 32,
+                "length": 1
+            },
+            "32": {
+                "type": "CUERVA-30",
+                "nodefrom": 25,
+                "nodeto": 33,
+                "length": 1
+            },
+            "33": {
+                "type": "CUERVA-23",
+                "nodefrom": 34,
+                "nodeto": 28,
+                "length": 1
+            },
+            "34": {
+                "type": "CUERVA-24",
+                "nodefrom": 35,
+                "nodeto": 28,
+                "length": 1
+            },
+            "35": {
+                "type": "CUERVA-31",
+                "nodefrom": 28,
+                "nodeto": 36,
+                "length": 1
+            },
+            "36": {
+                "type": "CUERVA-32",
+                "nodefrom": 29,
+                "nodeto": 37,
+                "length": 1
+            },
+            "37": {
+                "type": "CUERVA-33",
+                "nodefrom": 30,
+                "nodeto": 38,
+                "length": 1
+            },
+            "38": {
+                "type": "CUERVA-34",
+                "nodefrom": 32,
+                "nodeto": 39,
+                "length": 1
+            },
+            "39": {
+                "type": "CUERVA-29",
+                "nodefrom": 32,
+                "nodeto": 40,
+                "length": 1
+            },
+            "40": {
+                "type": "CUERVA-35",
+                "nodefrom": 33,
+                "nodeto": 41,
+                "length": 1
+            },
+            "41": {
+                "type": "CUERVA-23",
+                "nodefrom": 42,
+                "nodeto": 36,
+                "length": 1
+            },
+            "42": {
+                "type": "CUERVA-24",
+                "nodefrom": 43,
+                "nodeto": 36,
+                "length": 1
+            },
+            "43": {
+                "type": "CUERVA-25",
+                "nodefrom": 36,
+                "nodeto": 44,
+                "length": 1
+            },
+            "44": {
+                "type": "CUERVA-36",
+                "nodefrom": 37,
+                "nodeto": 45,
+                "length": 1
+            },
+            "45": {
+                "type": "CUERVA-11",
+                "nodefrom": 38,
+                "nodeto": 46,
+                "length": 1
+            },
+            "46": {
+                "type": "CUERVA-14",
+                "nodefrom": 40,
+                "nodeto": 47,
+                "length": 1
+            },
+            "47": {
+                "type": "CUERVA-37",
+                "nodefrom": 40,
+                "nodeto": 48,
+                "length": 1
+            },
+            "48": {
+                "type": "CUERVA-38",
+                "nodefrom": 41,
+                "nodeto": 49,
+                "length": 1
+            },
+            "49": {
+                "type": "CUERVA-23",
+                "nodefrom": 50,
+                "nodeto": 44,
+                "length": 1
+            },
+            "50": {
+                "type": "CUERVA-24",
+                "nodefrom": 51,
+                "nodeto": 44,
+                "length": 1
+            },
+            "51": {
+                "type": "CUERVA-31",
+                "nodefrom": 44,
+                "nodeto": 52,
+                "length": 1
+            },
+            "52": {
+                "type": "CUERVA-39",
+                "nodefrom": 45,
+                "nodeto": 53,
+                "length": 1
+            },
+            "53": {
+                "type": "CUERVA-5",
+                "nodefrom": 46,
+                "nodeto": 54,
+                "length": 1
+            },
+            "54": {
+                "type": "CUERVA-6",
+                "nodefrom": 48,
+                "nodeto": 55,
+                "length": 1
+            },
+            "55": {
+                "type": "CUERVA-24",
+                "nodefrom": 56,
+                "nodeto": 52,
+                "length": 1
+            },
+            "56": {
+                "type": "CUERVA-23",
+                "nodefrom": 57,
+                "nodeto": 52,
+                "length": 1
+            },
+            "57": {
+                "type": "CUERVA-25",
+                "nodefrom": 52,
+                "nodeto": 58,
+                "length": 1
+            },
+            "58": {
+                "type": "CUERVA-5",
+                "nodefrom": 54,
+                "nodeto": 59,
+                "length": 1
+            },
+            "59": {
+                "type": "CUERVA-29",
+                "nodefrom": 55,
+                "nodeto": 60,
+                "length": 1
+            },
+            "60": {
+                "type": "CUERVA-23",
+                "nodefrom": 61,
+                "nodeto": 58,
+                "length": 1
+            },
+            "61": {
+                "type": "CUERVA-24",
+                "nodefrom": 62,
+                "nodeto": 58,
+                "length": 1
+            },
+            "62": {
+                "type": "CUERVA-40",
+                "nodefrom": 58,
+                "nodeto": 63,
+                "length": 1
+            },
+            "63": {
+                "type": "CUERVA-27",
+                "nodefrom": 59,
+                "nodeto": 64,
+                "length": 1
+            },
+            "64": {
+                "type": "CUERVA-6",
+                "nodefrom": 60,
+                "nodeto": 65,
+                "length": 1
+            },
+            "65": {
+                "type": "CUERVA-41",
+                "nodefrom": 63,
+                "nodeto": 66,
+                "length": 1
+            },
+            "66": {
+                "type": "CUERVA-42",
+                "nodefrom": 63,
+                "nodeto": 67,
+                "length": 1
+            },
+            "67": {
+                "type": "CUERVA-43",
+                "nodefrom": 63,
+                "nodeto": 68,
+                "length": 1
+            },
+            "68": {
+                "type": "CUERVA-21",
+                "nodefrom": 64,
+                "nodeto": 69,
+                "length": 1
+            },
+            "69": {
+                "type": "CUERVA-44",
+                "nodefrom": 65,
+                "nodeto": 70,
+                "length": 1
+            },
+            "70": {
+                "type": "CUERVA-45",
+                "nodefrom": 66,
+                "nodeto": 71,
+                "length": 1
+            },
+            "71": {
+                "type": "CUERVA-46",
+                "nodefrom": 67,
+                "nodeto": 72,
+                "length": 1
+            },
+            "72": {
+                "type": "CUERVA-47",
+                "nodefrom": 68,
+                "nodeto": 73,
+                "length": 1
+            },
+            "73": {
+                "type": "CUERVA-48",
+                "nodefrom": 69,
+                "nodeto": 74,
+                "length": 1
+            },
+            "74": {
+                "type": "CUERVA-49",
+                "nodefrom": 69,
+                "nodeto": 75,
+                "length": 1
+            },
+            "75": {
+                "type": "CUERVA-50",
+                "nodefrom": 70,
+                "nodeto": 76,
+                "length": 1
+            },
+            "76": {
+                "type": "CUERVA-51",
+                "nodefrom": 71,
+                "nodeto": 77,
+                "length": 1
+            },
+            "77": {
+                "type": "CUERVA-52",
+                "nodefrom": 72,
+                "nodeto": 78,
+                "length": 1
+            },
+            "78": {
+                "type": "CUERVA-53",
+                "nodefrom": 73,
+                "nodeto": 79,
+                "length": 1
+            },
+            "79": {
+                "type": "CUERVA-54",
+                "nodefrom": 73,
+                "nodeto": 80,
+                "length": 1
+            },
+            "80": {
+                "type": "CUERVA-55",
+                "nodefrom": 75,
+                "nodeto": 81,
+                "length": 1
+            },
+            "81": {
+                "type": "CUERVA-2",
+                "nodefrom": 76,
+                "nodeto": 82,
+                "length": 1
+            },
+            "82": {
+                "type": "CUERVA-31",
+                "nodefrom": 77,
+                "nodeto": 83,
+                "length": 1
+            },
+            "83": {
+                "type": "CUERVA-56",
+                "nodefrom": 84,
+                "nodeto": 78,
+                "length": 1
+            },
+            "84": {
+                "type": "CUERVA-23",
+                "nodefrom": 85,
+                "nodeto": 78,
+                "length": 1
+            },
+            "85": {
+                "type": "CUERVA-57",
+                "nodefrom": 78,
+                "nodeto": 86,
+                "length": 1
+            },
+            "86": {
+                "type": "CUERVA-58",
+                "nodefrom": 80,
+                "nodeto": 87,
+                "length": 1
+            },
+            "87": {
+                "type": "CUERVA-59",
+                "nodefrom": 80,
+                "nodeto": 88,
+                "length": 1
+            },
+            "88": {
+                "type": "CUERVA-60",
+                "nodefrom": 81,
+                "nodeto": 89,
+                "length": 1
+            },
+            "89": {
+                "type": "CUERVA-4",
+                "nodefrom": 82,
+                "nodeto": 90,
+                "length": 1
+            },
+            "90": {
+                "type": "CUERVA-61",
+                "nodefrom": 83,
+                "nodeto": 91,
+                "length": 1
+            },
+            "91": {
+                "type": "CUERVA-62",
+                "nodefrom": 83,
+                "nodeto": 92,
+                "length": 1
+            },
+            "92": {
+                "type": "CUERVA-63",
+                "nodefrom": 93,
+                "nodeto": 86,
+                "length": 1
+            },
+            "93": {
+                "type": "CUERVA-64",
+                "nodefrom": 94,
+                "nodeto": 86,
+                "length": 1
+            },
+            "94": {
+                "type": "CUERVA-65",
+                "nodefrom": 86,
+                "nodeto": 95,
+                "length": 1
+            },
+            "95": {
+                "type": "CUERVA-57",
+                "nodefrom": 86,
+                "nodeto": 96,
+                "length": 1
+            },
+            "96": {
+                "type": "CUERVA-66",
+                "nodefrom": 87,
+                "nodeto": 97,
+                "length": 1
+            },
+            "97": {
+                "type": "CUERVA-67",
+                "nodefrom": 87,
+                "nodeto": 98,
+                "length": 1
+            },
+            "98": {
+                "type": "CUERVA-68",
+                "nodefrom": 87,
+                "nodeto": 99,
+                "length": 1
+            },
+            "99": {
+                "type": "CUERVA-69",
+                "nodefrom": 88,
+                "nodeto": 100,
+                "length": 1
+            },
+            "100": {
+                "type": "CUERVA-70",
+                "nodefrom": 89,
+                "nodeto": 101,
+                "length": 1
+            },
+            "101": {
+                "type": "CUERVA-71",
+                "nodefrom": 90,
+                "nodeto": 102,
+                "length": 1
+            },
+            "102": {
+                "type": "CUERVA-72",
+                "nodefrom": 90,
+                "nodeto": 103,
+                "length": 1
+            },
+            "103": {
+                "type": "CUERVA-73",
+                "nodefrom": 92,
+                "nodeto": 104,
+                "length": 1
+            },
+            "104": {
+                "type": "CUERVA-74",
+                "nodefrom": 92,
+                "nodeto": 105,
+                "length": 1
+            },
+            "105": {
+                "type": "CUERVA-75",
+                "nodefrom": 92,
+                "nodeto": 106,
+                "length": 1
+            },
+            "106": {
+                "type": "CUERVA-76",
+                "nodefrom": 96,
+                "nodeto": 107,
+                "length": 1
+            },
+            "107": {
+                "type": "CUERVA-56",
+                "nodefrom": 108,
+                "nodeto": 96,
+                "length": 1
+            },
+            "108": {
+                "type": "CUERVA-24",
+                "nodefrom": 109,
+                "nodeto": 96,
+                "length": 1
+            },
+            "109": {
+                "type": "CUERVA-77",
+                "nodefrom": 96,
+                "nodeto": 110,
+                "length": 1
+            },
+            "110": {
+                "type": "CUERVA-78",
+                "nodefrom": 97,
+                "nodeto": 111,
+                "length": 1
+            },
+            "111": {
+                "type": "CUERVA-79",
+                "nodefrom": 100,
+                "nodeto": 112,
+                "length": 1
+            },
+            "112": {
+                "type": "CUERVA-80",
+                "nodefrom": 101,
+                "nodeto": 113,
+                "length": 1
+            },
+            "113": {
+                "type": "CUERVA-71",
+                "nodefrom": 102,
+                "nodeto": 114,
+                "length": 1
+            },
+            "114": {
+                "type": "CUERVA-81",
+                "nodefrom": 102,
+                "nodeto": 115,
+                "length": 1
+            },
+            "115": {
+                "type": "CUERVA-82",
+                "nodefrom": 103,
+                "nodeto": 116,
+                "length": 1
+            },
+            "116": {
+                "type": "CUERVA-83",
+                "nodefrom": 103,
+                "nodeto": 117,
+                "length": 1
+            },
+            "117": {
+                "type": "CUERVA-84",
+                "nodefrom": 104,
+                "nodeto": 118,
+                "length": 1
+            },
+            "118": {
+                "type": "CUERVA-85",
+                "nodefrom": 107,
+                "nodeto": 119,
+                "length": 1
+            },
+            "119": {
+                "type": "CUERVA-24",
+                "nodefrom": 120,
+                "nodeto": 110,
+                "length": 1
+            },
+            "120": {
+                "type": "CUERVA-23",
+                "nodefrom": 121,
+                "nodeto": 110,
+                "length": 1
+            },
+            "121": {
+                "type": "CUERVA-57",
+                "nodefrom": 110,
+                "nodeto": 122,
+                "length": 1
+            },
+            "122": {
+                "type": "CUERVA-86",
+                "nodefrom": 111,
+                "nodeto": 123,
+                "length": 1
+            },
+            "123": {
+                "type": "CUERVA-87",
+                "nodefrom": 111,
+                "nodeto": 124,
+                "length": 1
+            },
+            "124": {
+                "type": "CUERVA-88",
+                "nodefrom": 113,
+                "nodeto": 125,
+                "length": 1
+            },
+            "125": {
+                "type": "CUERVA-89",
+                "nodefrom": 114,
+                "nodeto": 126,
+                "length": 1
+            },
+            "126": {
+                "type": "CUERVA-90",
+                "nodefrom": 127,
+                "nodeto": 117,
+                "length": 1
+            },
+            "127": {
+                "type": "CUERVA-91",
+                "nodefrom": 117,
+                "nodeto": 128,
+                "length": 1
+            },
+            "128": {
+                "type": "CUERVA-92",
+                "nodefrom": 118,
+                "nodeto": 129,
+                "length": 1
+            },
+            "129": {
+                "type": "CUERVA-93",
+                "nodefrom": 118,
+                "nodeto": 130,
+                "length": 1
+            },
+            "130": {
+                "type": "CUERVA-23",
+                "nodefrom": 131,
+                "nodeto": 122,
+                "length": 1
+            },
+            "131": {
+                "type": "CUERVA-24",
+                "nodefrom": 132,
+                "nodeto": 122,
+                "length": 1
+            },
+            "132": {
+                "type": "CUERVA-94",
+                "nodefrom": 122,
+                "nodeto": 133,
+                "length": 1
+            },
+            "133": {
+                "type": "CUERVA-95",
+                "nodefrom": 122,
+                "nodeto": 134,
+                "length": 1
+            },
+            "134": {
+                "type": "CUERVA-96",
+                "nodefrom": 123,
+                "nodeto": 135,
+                "length": 1
+            },
+            "135": {
+                "type": "CUERVA-97",
+                "nodefrom": 123,
+                "nodeto": 136,
+                "length": 1
+            },
+            "136": {
+                "type": "CUERVA-98",
+                "nodefrom": 137,
+                "nodeto": 124,
+                "length": 1
+            },
+            "137": {
+                "type": "CUERVA-99",
+                "nodefrom": 125,
+                "nodeto": 138,
+                "length": 1
+            },
+            "138": {
+                "type": "CUERVA-100",
+                "nodefrom": 128,
+                "nodeto": 139,
+                "length": 1
+            },
+            "139": {
+                "type": "CUERVA-101",
+                "nodefrom": 128,
+                "nodeto": 140,
+                "length": 1
+            },
+            "140": {
+                "type": "CUERVA-102",
+                "nodefrom": 129,
+                "nodeto": 141,
+                "length": 1
+            },
+            "141": {
+                "type": "CUERVA-43",
+                "nodefrom": 130,
+                "nodeto": 142,
+                "length": 1
+            },
+            "142": {
+                "type": "CUERVA-103",
+                "nodefrom": 134,
+                "nodeto": 143,
+                "length": 1
+            },
+            "143": {
+                "type": "CUERVA-23",
+                "nodefrom": 144,
+                "nodeto": 134,
+                "length": 1
+            },
+            "144": {
+                "type": "CUERVA-24",
+                "nodefrom": 145,
+                "nodeto": 134,
+                "length": 1
+            },
+            "145": {
+                "type": "CUERVA-104",
+                "nodefrom": 140,
+                "nodeto": 146,
+                "length": 1
+            },
+            "146": {
+                "type": "CUERVA-90",
+                "nodefrom": 140,
+                "nodeto": 147,
+                "length": 1
+            },
+            "147": {
+                "type": "CUERVA-105",
+                "nodefrom": 140,
+                "nodeto": 148,
+                "length": 1
+            },
+            "148": {
+                "type": "CUERVA-106",
+                "nodefrom": 142,
+                "nodeto": 149,
+                "length": 1
+            }
+        }
+    }
+}
